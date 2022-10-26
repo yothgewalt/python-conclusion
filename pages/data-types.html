@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Data Types and Variables - Python conclusion by Yongyuth Chuankhuntod</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="./../assets/css/main.css" />
+    <link rel="icon" type="image/x-icon" href="./../assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./../assets/favicon-16x16.png">
+    <link rel="manifest" href="./../assets/site.webmanifest">
+</head>
+
+<body class="is-preload">
+    <section id="header">
+        <header>
+            <span class="image avatar"><img src="./../images/avatar.jpg" alt="" /></span>
+            <h1 id="logo"><a href="./../index.html">ยงยุทธ ชวนขุนทด</a></h1>
+            <p>ทำงานให้ได้เหมือนดั่งธรรมชาติ<br />
+                เพื่อที่จะให้ธรรมชาติพาเราสู่จุดไร้ที่ติ</p>
+        </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="#one" class="active">บทนำ</a></li>
+                <li><a href="#two">ประเภทข้อมูลของตัวแปร</a></li>
+                <li><a href="#three">เครื่องหมายดำเนินการทางคณิตศาสตร์</a></li>
+                <li><a href="#four">การรับข้อมูลการจากพิมพ์</a></li>
+                <li><a href="#five">ติดต่อฉัน</a></li>
+            </ul>
+        </nav>
+        <footer>
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </footer>
+    </section>
+    <div id="wrapper">
+        <div id="main">
+            <section id="one">
+                <div class="image main" data-position="center">
+                    <img src="./../images/thumbnails/lecture-two-thumbnails.webp" alt="" />
+                </div>
+                <div class="container">
+                    <header class="major">
+                        <h3 style="color: #a57752;">ประเภทของข้อมูลในไพรธอน</h3>
+                        <p>การประกาศตัวแปรในภาษาไพรธอนแบบเบื้องต้น
+                        </p>
+                    </header>
+                    <p>การประกาศตัวแปรนั้นถือว่าเป็นสิ่งที่สำคัญในการเขียนโปรแกรมทำให้โปรแกรมสามารถเก็บตัวแปรต่างๆ เช่น
+                        ตัวเลข, ข้อความ และอื่นๆ เพื่อนำไปใช้งานในที่ต่างๆ ซึ่งถือว่าเป็นหัวใจหลักเลยทีเดียว
+                        ในการเขียนโปรแกรม หากเราเรียนลึกเข้าไปเรื่อยๆ เราจะพบกับ Type ที่ลึกกว่านี้เช่น Union Type
+                        เป็นต้น ฯลฯ</p>
+                </div>
+            </section>
+            <section id="two">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>ประเภทข้อมูลของตัวแปรแบบเบื้องต้น</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>ประเภทข้อมูลของตัวแปรแบบเบื้องต้นนั้นจะประกอบไปด้วย <span style="font-weight: 600;">string (str),
+                            integer (int), float (float), boolean (bool)</span> ซึ่งในแต่ละประเภทจะเก็บข้อมูลที่ต่างกัน
+                        และนำไปใช้งานที่ต่างกัน บางอันไม่สามารถแปลงเป็นค่านู้นนี้ได้
+                        บางอันก็สามารถแปลงไปเป็นอีกค่าหนึ่งได้ เช่น string ไปเป็น int เป็นต้น ฯลฯ
+                        ซึ่งในตัวอย่างผมได้ทำการ Assign Type ให้มันไปด้วย​​ ซึ่งนั่นเป็นสิ่งที่ไม่จำเป็นแต่ถ้าหากคนๆ
+                        หนึ่งติดการ Assign Type ไปแล้วมันก็จะไม่กลับมาได้อีกเลย 555+ ซึ่งผมจะบอกว่า​ Python นั้นเป็น
+                        Dynamic Type นะครับ สามารถประกาศชื่อตัวแปรพร้อมกับค่าได้เลย ไม่จำเป็นต้องทำแบบผม
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/d2f7af648e23f7eaefe0da9e9b34e560.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การรวมค่ากันของตัวแปร (บทเกริ่น)</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>
+                        การรวมค่าของแต่ละตัวแปรนั้นถือว่าเป็นสิ่งสำคัญ เพราะเราสามารถนำไปต่อยอดทำโปรแกรมได้ในหลายๆ
+                        แบบและเป็นอีกหนึ่งสิ่งที่เราต้องใช้งานอยู่เป็นประจำ
+                        ไม่ว่าจะเป็นการเอาข้อความนี้นู่นนี่นั่นมารวมกันเพื่อ เข้ารหัส
+                        และนำไปใช้งานต่อไปภายในงานเขียนโปรแกรมของเรา
+                    </p>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การรวมค่าตัวแปรของ String</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>การรวมค่าของสตริงนั้นสามารถใช้ได้ด้วยโดยการใช้สัญลักษณ์ <span style="font-weight: 600;">+</span>
+                        เพื่อรวมค่าของสองค่า
+                        ซึ่งผลลัพพ์จะออกมาตามตัวแปรที่เราประกาศไว้ซึ่งเราได้ทำการนำมารวมกันมันจะกลายเป็น <span
+                            style="font-weight: 600;">"I loves Programming, I hates Programming"</span>
+                        ซึ่งค่าเหล่านี้มาจากการประกาศตัวแปรจากตัวอย่างข้างต้น
+                        หรือหากรวมมากกว่าสองตัวแปรก็แค่ประกาศตัวแปรเพิ่มและขั้นด้วยสัญลักษณ์ในการรวมค่าของมันซึ่งผมกล่าวไปแล้วต่ออีก
+                        คุณก็จะได้ผลลัพธ์ที่คุณต้องการ </p>
+                    <script src="https://gist.github.com/Yothgewalt/cdb260d2cf72275fc43beff2d8af3918.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การรวมค่าตัวแปรของ Integer และ Float</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>การรวมค่าของอินทีเจอร์นั้นสามารถใช้ได้ด้วยการใช้เครื่องหมายทางคณิตศาสตร์โดยทั่วไปได้เลย เช่น
+                        <span style="font-weight: 600;">+ (บวก), - (ลบ), * (คูณ), / (หาร), % (โมดูลล่าร์)</span>
+                        ซึ่งสามารถใช้ได้กับตัวแปรประเภทข้อมูลที่เป็น <span style="font-weight: 600;">Float</span>
+                        เพราะว่ามันคือตัวเลขเหมือนกันแต่ ความพิเศษจิเกอร์เบลของ Float คือมันมีทศนิยมมาด้วย
+                        ซึ่งจะได้ค่าที่ละเอียดกว่า <span style="font-weight: 600;">Integer</span>
+                        ซึ่งเป็นตัวแปรประเภทจำนวนเต็ม
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/82f1bdb41f2c2c8ce448a4619141ed27.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การรวมค่าตัวแปรของ Boolean</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>ตัวแปรประเภท <span style="font-weight: 600;">Boolean</span> นั้นจะไม่มีการรวมค่าเหมือน
+                        ตัวแปรประเภทอื่นๆ ซึ่งความสามารถพิเศษของตัวแปรประเภทนี้คือการ <span
+                            style="font-weight: 600;">Comparision</span> หรือการเปรียบเทียบ
+                        ซึ่งถ้าหากใครยังจำ ตรรกศาสตร์ <span style="font-weight: 600;">(Logical)</span> ได้อยู่
+                        คุณก็จะสามารถตอบคำถามหรือคาดการณ์คำตอบของตัวอย่างนี้ได้
+                        ซึ่งในตัวอย่างที่จะใช้การเปรียบเทียบโดยการใช้ <span style="font-weight: 600;">AND</span>
+                        ซึ่งมันคือ <span style="font-weight: 600;">และ</span> ในภาษาไทย และยังมีอื่นๆ
+                        อีกโดยปกติจะใช้กันโดยแพร่หลายคือ <span style="font-weight: 600;">AND, OR, NOT</span>
+                        ซึ่งถ้าเขียนเป็นภาษาไพรธอนจะใช้เป็น <span style="font-weight: 600;">and (ดั่งตัวอย่างในรูป), or,
+                            not</span> เป็นต้น ฯลฯ</p>
+                    <script src="https://gist.github.com/Yothgewalt/97d8da30283d85c39f4b791ece47566d.js"></script>
+                    <hr />
+                    <p>นำโค้ดทั้งหมดมารวมกันในหน้าเดียวจะเกิดเป็นภาพเล็กๆ ที่สามารถจินตนาการได้</p>
+                    <script src="https://gist.github.com/Yothgewalt/5483b0be395c24d978c87a24df538352.js"></script>
+                </div>
+            </section>
+            <section id="three">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>เครื่องหมายดำเนินการทางคณิตศาสตร์</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>การใช้เครื่องหมายดำเนินการทางคณิตศาสตร์ก็เป็นอีกหนึ่งสิ่งสำคัญที่คุณ
+                        สามารถนำสัญลักษณ์เหล่านี้เพื่อไปคำนวณตามสูตรเพื่อให้ได้ผลลัพธ์ที่ต้องการ เช่น
+                        คำนวณเงินเดือนและโอที, ราคาสินค้าทั้งหมด เป็นต้น​ ฯลฯ</p>
+                    <p>นอกจากบวกลบคูณหารแล้วยังมี การหารแบบไม่เอาเศษหรือก็คือปัดเศษทิ้งไปเลย และการยกกำลัง
+                        ซึ่งทั้งคู่จะใช้สัญลักษณ์ <span style="font-weight: 600;">// (หารไม่เอาเศษ) และ **
+                            (ยกกำลัง)</span></p>
+                    <script src="https://gist.github.com/Yothgewalt/ab91d5b89c6ee0c80b119ca19740ffcf.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>เครื่องหมายการเปรียบเทียบ</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>เครื่องหมายการเปรียบเทียบนั้นจะใช้สัญลักษณ์ทั้งหมดดั่งนี้ <span style="font-weight: 600;">
+                            < (น้อยกว่า),> (มากกว่า), <= (น้อยกว่าเท่ากับ),>= (มากกว่าเท่ากับ), != (ไม่เท่ากับ), ==
+                                    (เท่ากับ)
+                        </span> ซึ่งโดยทั่วไปเราใช้หมดในทุกๆ เครื่องหมายที่ผ่านมา
+                        ซึ่งเครื่องหมายเหล่านี้เมื่อนำไปใช้แล้ว ผลลัพธ์จะออกมาเป็น <span
+                            style="font-weight: 600;">Boolean</span> นั่นก็คือจริงหรือเท็จเท่านั้น ซึ่งโดย Common ทั่วไป
+                        ทุกคนน่าจะทราบเรื่องของการเปรียบเทียบกันดีอยู่แล้ว ซึ่งมันสามารถเปรียบเทียบได้แม้่กระทั่ง
+                        ข้อความซึ่งจะอยู่ในตัวอย่างของเรา และผมก็จะมีตัวอย่างให้ลองนั่งคิดกันเล่นๆ
+                        ดูก่อน ถ้าหากคิดไม่ออกว่า มันจะตอบ จริง​ (True) หรือ เท็จ (False)
+                        สามารถก็อปปี้โค้ดเพื่อลองไปรันได้เลย
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/862c4b9dbb7b2de4fd48306502f1120c.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>เครื่องหมายการจัดการ</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>การใช้เครื่องหมายการจัดการ สามารถใช้ได้โดยการใช้สัญลักษณ์ <span
+                            style="font-weight: 600;">=</span> ซึ่งความหมายของสัญลักษณ์นี้คือการให้ค่า หรือกำหนดตัวแปร
+                        และตวามสามารถพิเศษของมันนอกจากการกำหนดค่าแล้ว ยังสามารถเพิ่มค่าหรือลดค่าของมันได้
+                        โดยใช้ควบคู่ไปกับเครื่องหมายคณิตศาสตร์ที่เคยกล่าวมาข้างตน เช่น <span style="font-weight: 600;">x
+                            += 1</span> ถ้านำมาแปรเป็นสมการแบบที่เราคุ้นเคยกันก็คือ x = x + 1 นั่นเอง ซึ่งตรงเครื่องหมาย
+                        <span style="font-weight: 600;">+</span> เราสามารถเปลี่ยนเป็นอย่างอื่นได้
+                        ซึ่งต้องเกี่ยวข้องกับเครื่องหมายการดำเนินการทางคณิตศาสตร์
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/6eacda6a285b612b384e7288687fe293.js"></script>
+                </div>
+            </section>
+            <section id="four">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การรับข้อมูลการจากแป้นพิมพ์</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>คุณสามารถรับข้อมูลจากแป้นพิมพ์ได้โดยการใช้งานฟังก์ชั่น <span
+                            style="font-weight: 600;">input()</span> และสามารถนำข้อมูลที่พิมพ์มาไปประมวลผลต่อได้ เช่น
+                        การรวมชื่อจริงกับนามสกุล, กรอกคะแนนของคุณเพื่อคำนวณเกรด เป็นต้น​ ฯลฯ ซึ่งคุณสามารถครอบได้ด้วย
+                        ประเภทของตัวแปรเพื่อที่จะ Scope การรับข้อมูลของฟังก์ชั่นนี้เช่น การครอบ <span
+                            style="font-weight: 600;">int(input())</span> หากคุณครอบ int()
+                        ไปแล้วคุณจะไม่สามารถใส่ข้อมูลประเภทอื่นได้อีกเลย หรือหากคุณต้องการ float คุณแค่ครอบ <span
+                            style="font-weight: 600;">float(input())</span> คุณก็จะได้ตัวรับข้อมูลแบบประเภท Float แล้ว
+                        และคุณยังสามารถพิมพ์ Prompt Message ลงไปเพื่อบอกว่าสิ่งที่กำลังให้ใส่ข้อมูลนั้นคืออะไร
+                        ดั่งตัวอย่างในรูป <span style="font-weight: 600;">input("prompt message")</span></p>
+                    <script src="https://gist.github.com/Yothgewalt/81540aacfe3be04dd1d283c5b406ddbe.js"></script>
+                </div>
+            </section>
+            <section id="five">
+                <div class="container">
+                    <h3>ติดต่อฉัน</h3>
+                    <p>หากคุณสนใจในผลงานของฉันและต้องการที่จะจ้างงานหรือติดต่อพูดคุยกับฉัน
+                        คุณสามารถติดต่อกับฉันได้ผ่านทางฟอร์มในเว็บไซต์นี้ ซึ่งจะถูกส่งไปที่อีเมลล์ของฉันอีกที</p>
+                    <form method="post" action="#">
+                        <div class="row gtr-uniform">
+                            <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name"
+                                    placeholder="ชื่อ" /></div>
+                            <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email"
+                                    placeholder="อีเมลล์" /></div>
+                            <div class="col-12"><input type="text" name="subject" id="subject" placeholder="หัวข้อ" />
+                            </div>
+                            <div class="col-12"><textarea name="message" id="message" placeholder="ข้อความ"
+                                    rows="6"></textarea></div>
+                            <div class="col-12">
+                                <ul class="actions">
+                                    <li><input type="submit" class="primary" value="ส่งข้อความ" /></li>
+                                    <li><input type="reset" value="รีเซ็ทฟอร์ม" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <section id="footer">
+            <div class="container">
+                <ul class="copyright">
+                    <li>&copy; Untitled. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script src="./../assets/js/jquery.min.js"></script>
+    <script src="./../assets/js/jquery.scrollex.min.js"></script>
+    <script src="./../assets/js/jquery.scrolly.min.js"></script>
+    <script src="./../assets/js/browser.min.js"></script>
+    <script src="./../assets/js/breakpoints.min.js"></script>
+    <script src="./../assets/js/util.js"></script>
+    <script src="./../assets/js/main.js"></script>
+</body>
+
+</html>

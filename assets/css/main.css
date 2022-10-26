@@ -1885,8 +1885,10 @@ header h6 + p {
 }
 
 header.major h2 {
-  color: #3b82f6;
+  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
   font-size: 3.5em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header.major h2 + p {
@@ -2500,7 +2502,8 @@ ul.feature-icons li:before {
 }
 
 ul.feature-icons li:before {
-  background: #3b82f6;
+  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+  color: #d2f2e9;
   border-radius: 100%;
   color: #ffffff;
   display: block;
@@ -2716,7 +2719,7 @@ input[type="submit"].primary,
 input[type="reset"].primary,
 input[type="button"].primary,
 .button.primary {
-  background-color: #3b82f6;
+  background-color: #04befe;
   color: #ffffff !important;
 }
 
@@ -2724,7 +2727,7 @@ input[type="submit"].primary:hover,
 input[type="reset"].primary:hover,
 input[type="button"].primary:hover,
 .button.primary:hover {
-  background-color: #2563eb;
+  background-color: #4481eb;
 }
 
 input[type="submit"].primary:active,
@@ -2793,6 +2796,10 @@ input[type="button"]:disabled,
 
 /* Header */
 
+.introduction-navigator {
+  background-color: #4acaa8;
+}
+
 #header {
   display: -moz-flex;
   display: -webkit-flex;
@@ -2806,7 +2813,7 @@ input[type="button"]:disabled,
   -webkit-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
-  background: #3b82f6;
+  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
   color: #d2f2e9;
   height: 100%;
   overflow-y: auto;
@@ -2815,6 +2822,7 @@ input[type="button"]:disabled,
   top: 0;
   width: 23em;
   right: 0;
+  z-index: 10;
 }
 
 #header h1,
@@ -3472,7 +3480,7 @@ input[type="button"]:disabled,
   align-items: center;
 }
 
-.ream-more-button {
+.read-more-button {
   font-size: 13pt;
   font-family: "Seed", sans-serif;
   height: 2.75em;
@@ -3482,7 +3490,7 @@ input[type="button"]:disabled,
   font-weight: 700;
   border-radius: 5px;
   border: 0;
-  background-color: #3b82f6;
+  background-color: #04befe;
   color: #ffffff !important;
   white-space: nowrap;
   cursor: pointer;
@@ -3491,6 +3499,21 @@ input[type="button"]:disabled,
   transition-duration: 150ms;
 }
 
-.ream-more-button:hover {
-  background-color: #2563eb;
+.read-more-button:hover {
+  background-color: #4481eb;
+}
+
+.preview-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-image > image {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
+  border-radius: 16px;
 }
