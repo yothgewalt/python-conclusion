@@ -24,9 +24,11 @@
         <nav id="nav">
             <ul>
                 <li><a href="#one" class="active">บทนำ</a></li>
-                <li><a href="#two">เงื่อนไขแบบเบื้องต้น</a></li>
-                <li><a href="#three">เงื่อนไขหลายเงื่อนไข</a></li>
-                <li><a href="#four">ติดต่อฉัน</a></li>
+                <li><a href="#two">การใช้งานลิสต์เบื้องต้น</a></li>
+                <li><a href="#three">การประยุกต์ใช้งานลิสต์</a></li>
+                <li><a href="#four">การใช้งานทูเปิลแบบเบื้องต้น</a></li>
+                <li><a href="#five">การใช้ไลบรารี่สำหรับแสดงกราฟ</a></li>
+                <li><a href="#six">ติดต่อฉัน</a></li>
             </ul>
         </nav>
         <footer>
@@ -50,78 +52,191 @@
                 <div class="container">
                     <header class="major">
                         <h3 style="color: #ae7950;">การใช้งานตัวแปรแบบลิสต์</h3>
-                        <p>การเช็คเงื่อนไขเพื่อหาค่าในภาษาไพรธอน
+                        <p>การใช้งานตัวแปรแบบลิสต์ในภาษาไพรธอน
                         </p>
                     </header>
-                    <p>การเช็คเงื่อนไขเป็นสิ่งที่ต้องใช้งานอยู่ประจำเมื่อได้ทำงานด้านนี้ไม่ว่าจะใหญ่หรือเล็ก
-                        มันทำให้เราสามารถแยกการคำนวณของแต่ละ Case ได้อย่างเช่น แยกคนที่ทำงานเกิน 40 ชั่วโมงขึ้นไป
-                        หากคนที่ทำงานต่ำกว่า 40 ชั่วโมงจะให้คำนวณอีกแบบเป็นต้น ทำให้เราสามารถแยกสิ่งต่างๆ
-                        ที่เราต้องการให้มันเกิดขึ้นได้อย่างเป็นไปได้</p>
+                    <p>ข้อมูลประเภทลิสต์นั้นเป็นประเภทข้อมูลที่ช่วยทำให้่เราสามารถเก็บตัวแปรให้ได้เยอะๆ
+                        ได้ในภายในตัวแปรเดียวซึ่งคุณสามารถใส่ประเภทข้อมูลอื่นได้โดยไม่จำเป็นต้องเป็นตัวแปรประเภทของข้อมูลเดียวกัน​
+                        ซึ่งในการใช้งานลิสต์นั้นโดยส่วนมากจะมีการใช้วนลูปโดยส่วนมากในการร่วมใช้งานกับตัวแปรประเภทลิสต์
+                    </p>
                 </div>
             </section>
             <section id="two">
                 <div class="container">
                     <header class="major" style="margin-top: 64px;">
-                        <h4>การเช็คเงื่อนไขแบบเบื้องต้น</h4>
-                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
-                    </header>
-                    <p>การเช็คเงื่ิอนไขนั้นเราจะใช้คำที่มีชื่อว่า <span style="font-weight: 600;">if</span> หรือแปลว่า
-                        "ถ้า"
-                        ซึ่งหลังจากนั้นเราจะทำการใส่ค่าหนึ่งลงไปเพื่อเปรียบเทียบโดยใช้เครื่องหมายการเปรียบเทียบกับอีกค่าหนึ่งตามตัวอย่างที่แนบมา
-                        ซึ่งถ้าหากเขียนเงื่อนไขเสร็จเราจะทำการเพิ่ม&nbsp;&nbsp;&nbsp;&nbsp;
-                        <span style="font-weight: 600;">:
-                            (double-colon)</span> เข้าไปเพื่ิอบอกว่าจบบรรทัดการประกาศเงื่อนไขของ if
-                        ซึ่งในบรรทัดไปหลังจากเราปิดด้วย double-colon นั้นจะเป็นสิ่งที่เราต้องการให้ทำ
-                        เมื่อเงื่อนไขที่เราได้ตั้งมานั้นมันเป็น <span style="font-weight: 600;">จริง (True)</span>
-                        และถ้าหากไม่เป็นจริง การเช็คเงื่อนไขก็จะไปเข้าในส่วนของ <span
-                            style="font-weight: 600;">else</span> เพื่อบอกว่าไม่มีเงื่อนไขใดเข้าเงื่อนไขเลย
-                    </p>
-                    <script src="https://gist.github.com/Yothgewalt/a5b6cd30f217e0260d224d3b6300272f.js"></script>
-                    <hr />
-                    <header class="major" style="margin-top: 64px;">
-                        <h4>การเปรียบเทียบที่มากกว่า 1 ค่า</h4>
+                        <h4>การใช้งานลิสต์เบื้องต้น</h4>
                         <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
                     </header>
                     <p>
-                        การเช็คเงื่อนไขไม่จำเป็นว่าต้องเปรียบเทียบได้แค่ 1 ค่าเท่านั้น คุณสามารถเปรียบเทียบกี่ค่าก็ได้จะ
-                        5 ค่า หรือ 100 ค่าก็ได้ <span style="font-weight: 600;">(ถ้าคุณไหว)</span>
-                        การเปรียบเทียบที่มากกว่าหนึ่งค่านั้น
-                        หากเป็นการเปรียบเทียบระหว่างสองค่าที่ไม่ใช่การเปรียบเทียบแบบเช็คว่าตัวเองเป็นจริงหรือเท็จนั้น
-                        ต้องใส่ <span style="font-weight: 600;">Parent หรือว่า วงเล็บ -> ()</span>
-                        เพื่อแยกส่วนการคำนวณและทำให้โค้ดอ่านง่ายขึ้น จากโค้ดเราจะใช้ <span
-                            style="font-weight: 600;">AND</span> เป็นตัวเชื่อมระหว่างสองเงื่อนไข ซึ่งเงื่อนไขแรกคือ
-                        <span style="font-weight: 600;">(authentication_service and jwt_authorized)</span>
-                        และเงื่อนไขอีกเงื่อนไขคือการเช็คว่าตัวเองนั้นเป็นจริงหรือเท็จ​ ซึ่งผมใส่ not ลงไป ข้างหน้า <span
-                            style="font-weight: 600;">user_authorized</span> เพื่อบอกว่าสิ่งนี้ต้องเป็น <span
-                            style="font-weight: 600;">False</span> นะไม่ใช่ True
-                        ถ้าหากเราไม่ใส่เวลาเช็คเงื่อนไขมันจะตรวจว่า user_authorized นั้นเป็น True ใช่ไหม?
-                        ซึ่งจากในตัวอย่าง user_authorized ผมเป็น False ซึ่งนั่นมันไม่เป็นจริงแน่นอน
-                        มันก็จะไม่เข้่าเงื่อนไขของเรานั่นเอง เราก็ต้องใส่ <span style="font-weight: 600;">นิเสธ หรือ
-                            not</span> ให้กับตัวมัน และเมื่อเงื่อนไขทั้งสองเป็น True And True มันก็เป็น True ใช่ไหม
-                        ตามตรรกศาสตร์ที่เราเรียนมา หลังจากนั้นมันก็จะทำงานใน if statement ที่เราสร้างขึ้นมา <span
-                            style="font-weight: 600;">(ลืมบอกไม่จำเป็นต้องใส่ else นะจ๊ะใช้ได้เหมือนกัน)</span>
+                        หากคุณต้องการใช้งานลิสต์นั้น คุณต้องใช้สัญลักษณ์หนึ่งซึ่งเรียกว่า <span
+                            style="font-weight: 600;">Square Brackets หรือ []</span>
+                        ในการให้่ค่่ากับตัวแปรซึ่งคุณสามารถใส่ค่าให้มันไปเลยก็ได้หรือว่าเว้นว่างไว้ใส่ค่าที่หลังก็ได้
+                        <span style="font-weight: 600;">ตัวอย่างตามข้างล่าง</span>
                     </p>
-                    <script src="https://gist.github.com/Yothgewalt/ef7657e809ff16a043527a489ba06b45.js"></script>
+                    <script src="https://gist.github.com/Yothgewalt/0a5b46e8287ea754904a94feb3b966a9.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>ตำแหน่งและขนาดของลิสต์</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>ลิสต์นั้นมีตำแหน่งของมันด้วยซึ่งคล้ายคลึงเหมือนกับของ <span
+                            style="font-weight: 600;">สตริง</span> แต่ว่าของลิสต์นั้นจะนับเป็นข้อมูลเช่น <span
+                            style="font-weight: 600;">[1, 2 ,3]</span> ผมต้องการเอา 1 กับ 3 มาผมก็แค่เรียก
+                        ชื่อตัวแปรของลิสต์แล้วก็ตามด้วย <span style="font-weight: 600;">[ตำแหน่ง]</span> ซึ่งจะกลายเป็น
+                        numbers[0] กับ number[2] ซึ่งถ้าหากคงเรามีโค้ดตัวอย่างด้านล่าง</p>
+                    <script src="https://gist.github.com/Yothgewalt/b364bb1fc2ba63b480fc5e88914186e9.js"></script>
                 </div>
             </section>
             <section id="three">
                 <div class="container">
                     <header class="major" style="margin-top: 64px;">
-                        <h4>การเช็คเงื่อนไขแบบซ้อนกัน</h4>
+                        <h4>การประยุกต์ใช้งานลิสต์</h4>
                         <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
                     </header>
-                    <p>คุณสามารถเพิ่มเงื่อนไขลงไปในเงื่อนไขได้อีกทีหนึ่ง​​ ซึ่งไม่เกิดปัญหาอะไร
-                        คุณสามารถทำกี่ชั้นก็ได้แต่ไม่น่าดี ซึ่งผมจะไม่พูดถึงเรื่อง <span
-                            style="font-weight: 600;">Performance</span>
-                        จากโค้ดสังเกตว่าผมมีการเพิ่มเงื่อนไขลงไปในส่วนของโค้ดเดิมซึ่งมันก็จะแสดง คำว่า "Void" ออกมาหาก
-                        user_authorized นั้นเป็นจริง และผมก็สามารถเพิ่ม else ลงไปให้กับ เงื่อนไขชั้นแรกได้่อีกด้วย
-                        หากเงื่อนไขชั้นแรกไม่เป็นจริง โปรแกรมก็จะมาทำงานในส่วนของ Else และแสดงข้อความว่า <span
-                            style="font-weight: 600;">"Unauthorized"</span>
+                    <p>การประยุกต์ใช้งานลิสต์นั้นเป็นไปได้หลายแนวทางมากและมีการใช้งานร่วมกับฟังก์ชั่นอีกด้วยทำให้เกิด
+                        แนวทางการเขียนโปรแกรมแบบใหม่ๆ เพิ่มขึ้นและยังมีเรื่องของ <span
+                            style="font-weight: 600;">การวนลูป</span> อีกด้วย เดี๋ยวเราไปดูกันเลย
                     </p>
-                    <script src="https://gist.github.com/Yothgewalt/5ff37caa84643b13df6970a607025092.js"></script>
+                    <p><span style="font-weight: 600;">การเช็คเงื่อนไขและการวนลูปสำหรับลิสต์</span>
+                        ซึ่งสำหรับการเช็คเงื่อนไขนั้นมีอยู่ 2 คีย์เวิร์ดที่ใช้บ่อยๆ นั่นก็คือ <span
+                            style="font-weight: 600;">not</span> และ <span style="font-weight: 600;">in</span> แต่สำหรับ
+                        <span style="font-weight: 600;">in</span> นั้่นสามารถใช้กับในการวนลูปอีกด้วย
+                        ซึ่งคุณสามารถดูได้จากตัวอย่างโค้ดด้านล่าง
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/be8925a6a502ae489f1e928e11e3717d.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การใช้งานฟังก์ชั่นร่วมกับลิสต์</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>การใช้งานฟังก์ชั่นร่วมกับลิสต์นั้น ในส่วนของโค้ดนี้จะเป็นการใช้งาน <span
+                            style="font-weight: 600;">.append(item)</span> กับ <span
+                            style="font-weight: 600;">.index(item)</span>
+                        ซึ่งฟังก์ชั่นแรกจะเป็นการเพิ่มไอเทมเข้าไปในลิสต์ที่เราใช้ฟังก์ชั่นด้วยซึี่งจะเพิ่มเข้าไปหลังสุดของลิสต์
+                        และส่วนฟังก์ชั่นที่สองไว้ใช้สำหรับหาไอเทมในลิสต์เพียงแค่ใส่สตริงหรือข้อความที่ต้องการจะหาเข้าไป
+                        <span style="font-weight: 600;">ตัวอย่างตามด้านล่าง</span>
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/a0cb3eb4c0cc868776babfaad0b0a5de.js"></script>
+                    <hr />
+                    <p>การใช้งานฟังก์ชั่น <span style="font-weight: 600;">.insert(index, item), .sort(),
+                            .remove(item)</span> และ <span style="font-weight: 600;">.reverse()</span>
+                        เริ่มต้นที่ฟังก์ชั่นแรกก็คือ .insert(index, item)
+                        นั้นเป็นตัวแทรกข้่อมูลด้วยต้องการตำแหน่งของลิสต์และก็ไอเท็มที่ต้องการจะเพิ่มเข้าไป
+                        ฟังก์ชั่นที่สอง .sort()
+                        เป็นฟังก์ชั่นที่เอาไว้จัดเรียงตัวเลขหริือตัวอักษรให้มันเรียงความสำคัญของลิสต์หรือว่าเรียงจากเล็กไปใหญ่
+                        ฟังก์ชั่นที่สาม .remove(item()) เอาไว้ใช้สำหรับการลบไอเท็มออกจากลิสต์ และฟังก์ชั่นสุดท้ายคือ
+                        .reverse() มันเอาไว้สำหรับกลับด้านข้อมูลจากหน้าเป็นหลัง <span
+                            style="font-weight: 600;">ตัวอย่างตามด้านล่าง</span></p>
+                    <script src="https://gist.github.com/Yothgewalt/8e43e837c4a8029ea42210abf6f72501.js"></script>
+                    <hr />
+                    <p>การใช้งานฟังก์ชั่น <span style="font-weight: 600;">del, min()</span> และ<span
+                            style="font-weight: 600;">max()</span> เป็นฟังก์ชั่นสุดท้ายในบทสำหรับของลิสต์
+                        ซึ่งฟังก์ชั่นแรกเอาไว้ลบไอเท็มในลิสต์แบบเจาะจง ฟังก์ชั่นที่สอง min() เอาไว้หาค่าที่ต่ำที่สุด
+                        ฟังก์ชั่นสุดท้ายคือ max() เอาไว้หาค่าที่สูงที่สุด <span
+                            style="font-weight: 600;">ตัวอย่างตามด้านล่าง</span></p>
+                    <script src="https://gist.github.com/Yothgewalt/795d9af48914abd5e9a16105bdb5ab0c.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>ลิสต์แบบหลายมิติ</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>ลิสต์นั้นที่เราได้เห็นมาก่อนหน้านี้ เป็นลิสต์แบบหนึ่งมิติซึ่งเก็บข้อมูลแบบชุดเดียวในลิสต์เดียว
+                        แต่ลิสต์แบบ <span style="font-weight: 600;">หลายมิติ</span>
+                        สามารถเก็บข้อมูลเป็นลิสต์ในลิสต์ได้อีกที่ทำให้สามารถแยกหมวดหมู่ตามที่เราต้องการได้ อย่างเช่น
+                        ลิสต์ที่หนึ่งเป็นสตริงและลิสต์ที่สองเป็นเลข เป็นต้น
+                        ซึ่งรูปแบบหรือหน้าตาของลิสต์หลายมิตินั้นเป็นประมาณนี้ <span style="font-weight: 600;">dimensions
+                            = [[1, 2, 3], ["a", "b", "c"], ...]</span> ซึ่งมันเป็นลิสต์แบบซ้อนทับกัน</p>
+                    <p>ตำแหน่งของลิสต์แบบหลายมิติ
+                        นั้นคล้ายคลึงแบบของหนึ่งมิติซึ่งวิธีอ้างอิงถึงลิสต์ข้างในอีกทีหนึ่งนั้นจะใช้ [][].. ซึ่งจะใส่
+                        Square Brackets ตามจำนวนของมิติ <span style="font-weight: 600;">ตัวอย่างตามด้านล่าง</span></p>
+                    <script src="https://gist.github.com/Yothgewalt/fb2a6bf8905460b984de8b84b1fcbae4.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การประยุกต์ใช้การวนลูปกับลิสต์หลายมิติ</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>โค้ดตัวอย่างนี้จะเป็นการสุ่มตัวเลข <span style="font-weight: 600;">1 ถึง 100</span> โดยมีการกำหนด
+                        ROWS และ COLUMNS สำหรับการให้ค่่ากับลิสต์ภายในอีกทีหนึ่ง ซึ่งฟังก์ชั่นการสุ่มตัวเลข
+                        เราได้นำเข้าโมดูลที่มีชื่อว่า <span style="font-weight: 600;">random</span> และใช้ฟังก์ชั่น
+                        randint(min, max) และหลังจากนั้นจะทำการแสดงผลออกมา <span
+                            style="font-weight: 600;">ตัวอย่างตามด้านล่าง</span></p>
+                    <script src="https://gist.github.com/Yothgewalt/ddb862a4e4cae6ddde96e4a5def01ef1.js"></script>
+                </div>
+            </section>
+            <section id="four">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การใช้งานทูเปิลแบบเบื้องต้น</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>ทูเปิลนั้นไม่เหมือนกับลิสต์ที่จะสามารถเปลี่ยนแค่ภายในตัวเองได้
+                        ดังนั้นหมายความว่าทูเปิลนั้นไม่สามารถเปลี่ยนค่าภายในของตัวเองได้
+                        แต่ก็ไม่ใช่ว่าจะไม่สามารถทำอะไรกับมันได้เลย
+                        ซึ่งฟังก์ชั่นที่สามารถใช้ได้นั้นมักเป็นฟังก์ชั่นที่เอาไว้สำหรับการอ่านหรือเข้าถึงข้อมูล เช่น
+                        <span style="font-weight: 600;">index(), len(), min() และ max()</span> เป็นต้น
+                        และยังสามารถนำไปคิิดคำนวณได้อีกด้วยเช่นการ <span style="font-weight: 600;">+</span> และ <span
+                            style="font-weight: 600;">*</span> เป็นต้น หรือเป็นการเช็คเงื่อนไขก็ <span
+                            style="font-weight: 600;">in</span> ก็สามารถใช้งานได้ <span
+                            style="font-weight: 600;">ตัวอย่างตามด้านล่าง</span>
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/ecfa0a1cc8c35ced3b6c7595ea7a0b5d.js"></script>
                 </div>
             </section>
             <section id="five">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การใช้ไลบรารี่สำหรับแสดงกราฟ</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>การใช้งานไลบรารี่สำหรับการแสดงกราฟนั้น มีตัวเด่นอยู่นั่นคือ <span
+                            style="font-weight: 600;">matplotlib</span> ซึ่งเป็นไลบรารี่ที่ดีที่สุดตอนนี้สำหรับการทำ
+                        <span style="font-weight: 600;">Data Visualization</span>
+                    </p>
+                    <p>วิธีการติดตั้งคือหากคุณใช้ <span style="font-weight: 600;">Windows</span>
+                        คุณสามารถใช้คำสั่งที่มีชื่อว่า<br /><span style="font-weight: 600;">pip install
+                            matplotlib</span></p>
+                    <p>วิธีการติดตั้งคือหากคุณใช้ <span style="font-weight: 600;">MacOS or Linux</span>
+                        คุณสามารถใช้คำสั่งที่มีชื่อว่า<br /><span style="font-weight: 600;">pip3 install
+                            matplotlib</span></p>
+                    <p><span style="font-weight: 600;">การสร้างกราฟแบบแรก</span>
+                        เป็นแบบเส้นโดยใช้ข้อมูลจากตัวแปรประเภทลิสต์นำมาเป็นข้อมูลให้กับกราฟเพื่อที่จะตีเส้นจุดสูงและจุดต่ำ
+                        ซึ่งกราฟแบบนี้เรียกว่า <span style="font-weight: 600;">กราฟแบบเส้น</span> ซึ่งใช้ฟังก์ชั่น <span
+                            style="font-weight: 600;">.plot()</span> ในการสร้าง
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/3673efbd62ab6020fb969acc5417841d.js"></script>
+                    <div class="preview-image">
+                        <img src="./../images/content/list-and-tuples/line_graph.png" alt=""
+                            style="border: 0; border-radius: 16px;" width="1317" height="760" />
+                    </div>
+                    <hr />
+                    <p><span style="font-weight: 600;">การสร้างกราฟแบบสอง</span>
+                        เป็นแบบแท่งโดยใช้ข้อมูลจากลิสต์และกำหนดขนาดความสูงจากลิสต์และความหนาของแท่ง
+                        ซึ่งกราฟแบบนี้เรียกว่า <span style="font-weight: 600;">กราฟเทียนแท่ง</span> ซึ่งใช้ฟังก์ชั่น
+                        <span style="font-weight: 600;">.bar() ในการสร้างกราฟ</span>
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/be26d5c68759fd6d748e9d1ea7d9d263.js"></script>
+                    <div class="preview-image">
+                        <img src="./../images/content/list-and-tuples/plot_bar_graph.png" alt=""
+                            style="border: 0; border-radius: 16px;" width="1317" height="760" />
+                    </div>
+                    <hr />
+                    <p><span style="font-weight: 600;">การสร้างกราฟแบบสาม</span>
+                        เป็นแบบพายโดยนำข้อมูลจากลิสต์มาใช้งาน
+                        ซึ่งกราฟแบบนี้เรียกว่า <span style="font-weight: 600;">กราฟสัดส่วนพาย</span> ซึ่งใช้ฟังก์ชั่น
+                        <span style="font-weight: 600;">.pie() ในการสร้างกราฟ</span>
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/6d925bb8275a0b0dec94ff624eeb6478.js"></script>
+                    <div class="preview-image">
+                        <img src="./../images/content/list-and-tuples/pie_graph.png" alt=""
+                            style="border: 0; border-radius: 16px;" width="1317" height="760" />
+                    </div>
+                    <div class="next-page-container">
+                        <a href="./../pages/file-and-exceptions.html" class="prev-page-button">ย้อนหน้ากลับ</a>
+                        <a href="./../pages/dictionaries-and-sets.html" class="next-page-button">หน้าต่อไป</a>
+                    </div>
+                </div>
+            </section>
+            <section id="six">
                 <div class="container">
                     <h3>ติดต่อฉัน</h3>
                     <p>หากคุณสนใจในผลงานของฉันและต้องการที่จะจ้างงานหรือติดต่อพูดคุยกับฉัน
