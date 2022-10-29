@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Iteration - Python conclusion by Yongyuth Chuankhuntod</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="./../assets/css/main.css" />
+    <link rel="icon" type="image/x-icon" href="./../assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./../assets/favicon-16x16.png">
+    <link rel="manifest" href="./../assets/site.webmanifest">
+</head>
+
+<body class="is-preload">
+    <section id="header">
+        <header>
+            <span class="image avatar"><img src="./../images/avatar.jpg" alt="" /></span>
+            <h1 id="logo"><a href="./../index.html">ยงยุทธ ชวนขุนทด</a></h1>
+            <p>ทำงานให้ได้เหมือนดั่งธรรมชาติ<br />
+                เพื่อที่จะให้ธรรมชาติพาเราสู่จุดไร้ที่ติ</p>
+        </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="#one" class="active">บทนำ</a></li>
+                <li><a href="#two">การวนลูปแบบเบื้องต้น</a></li>
+                <li><a href="#three">การประยุกต์ใช้งานการวนลูป</a></li>
+                <li><a href="#four">คีย์เวิร์ดพิเศษในการวนลูป</a></li>
+                <li><a href="#five">ติดต่อฉัน</a></li>
+            </ul>
+        </nav>
+        <footer>
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </footer>
+    </section>
+    <div id="wrapper">
+        <div id="main">
+            <section id="one">
+                <div class="image main" data-position="center">
+                    <a href="./../index.html#three">
+                        <img src="./../images/thumbnails/lecture-four-thumbnails.webp" alt="" />
+                    </a>
+                </div>
+                <div class="container">
+                    <header class="major">
+                        <h3 style="color: #7f6eb8;">การวนลูปและการประยุกต์</h3>
+                        <p>การวนลูปเพื่อลดขนาดของโค้ดและการใช้งานเบื้องต้น
+                        </p>
+                    </header>
+                    <p>การวนลูปนั้นสามารถประยุกต์ใช้ได้หลายอย่างและเป็นอีกหนึ่งสิ่งที่สำคัญมากๆ
+                        และก็ควรเน้นเรื่องนี้มากๆ ด้วยเพราะมันเป็นสิ่งสำคัญที่สุดและจะช่วยคุณมากที่สุด
+                        หากคุณเข้าทำงานในสายนี้ ซึ่งในบทสรุปนี้จะมีการยกตัวอย่างหลายๆ อย่างเช่นการใช้ <span
+                            style="font-weight: 600;">FOR</span> หรือ <span style="font-weight: 600;">WHILE</span>
+                        สำหรับการวนลูปซึ่งสองตัวนี้มีคุณสมบัติคือการวนลูปเหมือนกันแต่ ลักษณะการใช้งานนั้นต่างกัน
+                        ซึ่งรวมไปถึง keyword ต่างๆ ที่ใช้ในลูป เช่น <span style="font-weight: 600;">break, continue,
+                            pass</span> เป็นต้น</p>
+                </div>
+            </section>
+            <section id="two">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การวนลูปแบบเบื้องต้นโดยใช้ FOR</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>การวนลูปแบบ <span style="font-weight: 600;">FOR</span> นั้นเป็นการวนรูปแบบ Counting
+                        หรือการนับซึ่งจะมีประโยชน์เป็นอย่างมาก
+                        หากเป็นโปรแกรมที่ต้องการเพิ่มค่าหรือนับค่าตามจำนวนของสินค้านั้นถือว่าเป็นสิ่งที่สำคัญมาก
+                        ซึ่งจากโค้ดที่เป็นตัวอย่างตอนนี้คือการใช้ฟังก์ชั่น <span
+                            style="font-weight: 600;">range()</span> เพื่อบอกระยะว่าจะให้ทำงานถึงระยะไหน ซึ่งในวงเล็ปของ
+                        range() นั้นจะเป็นการใส่ int ลงไปเพื่อบอกจำนวนรอบที่ต้องการวนลูป
+                        ซึ่งในโปรแกรมคอมพิวเตอร์จะเริ่มจาก <span style="font-weight: 600;">0</span>
+                        ไปจนถึงจำนวนตัวเลขที่เราได้กำหนดไว้ ซึ่งในตัวอย่างผมกำหนดไว้ที่ 5 แต่มันจะนับจาก 0 จนกระทั่งถึง
+                        4 ซึ่งไม่แสดงเลข 5 ออกมานั่นถือว่าเป็นเรื่องปกติ
+                        เพราะการวนลูปแบบนี้เมื่อถึงจำนวนที่เรากำหนดแล้วมันจะถือว่าเป็นการจบของการวนลูปนั้นๆ</p>
+                    <script src="https://gist.github.com/Yothgewalt/cd76a8faf7ae39966d3a76d37b3a372d.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การใช้ฟังก์ชั่น range() แบบเพิ่มเติม</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                        <p>ฟังก์ชั่น range() นั้นสามารถเพิ่มค่าจุดเริ่มต้นของตัวเลขได้โดยมีการเพิ่มอยู่ 2 ส่วนด้วยกัน
+                            ส่วนแรกจะเป็น start และส่วนที่สองคือ end ซึ่งสองส่วนที่จะแยกจากกันโดยการใช้ <span
+                                style="font-weight: 600;">, (comma)</span> ในการแยกกัน
+                            นอกจากนั้นยังมีการเพิ่มว่าจะเพิ่มทีละกี่ขั้น เช่นจะให้นับตั้งแต่ 1 ถึง 10 และให้นับทีละ 2
+                            ขั้น จะออกมาเป็น <span style="font-weight: 600;">range(1, 11, 2)</span></p>
+                        <script src="https://gist.github.com/Yothgewalt/659894ebe7a999787de5b0b53390b89c.js"></script>
+                    </header>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การวนลูปแบบเบื้องต้นโดยใช้ WHILE</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>
+                        การวนลูปแบบ <span style="font-weight: 600;">WHILE</span> เป็นการวนลูปแบบใช้ Condition
+                        หรือเงื่อนไขในการทำงานซึ่งมักจะเอาไปใช้ทำงานในรูปแบบการเช็คความถูกต้อง เป็นต้น, ซึ่งจากในโค้ด
+                        ผมจะมีการใช้ keyword <span style="font-weight: 600;">import</span> เพื่อนำเข้า Library
+                        ตัวหนึ่งเข้าเพื่อเป็นตัวช่วยในการทำงานของโค้ดตัวอย่างเราครั้งนี้ ซึ่งมันคือ <span
+                            style="font-weight: 600;">time</span> อย่างต่อมาคือการวนลูปแบบ Counting แต่อยู่ในรูปแบบของ
+                        <span style="font-weight: 600;">WHILE</span> ซึ่งข้อดีเมื่ออยู่ใน while loop
+                        เราสามารถกำหนดรูปแบบของเงื่อนไขที่เราอยากให้มันจะเกิดได้ซึ่งเป็นข้อดีของมันนั่นเอง​
+                        ซึ่งจากโค้ดจะเป็นการเพิ่มค่าเข้าไปเรื่อยๆ ทีละ 1 โดยการใช้ += ซึ่งเราได้สรุปเรื่องนี้ไปแล้ว
+                        สามารถย้อนกลับหน้าหลักไปดูได้ :) หลังจากนั้นจะมีการ <span
+                            style="font-weight: 600;">time.sleep()</span> ซึ่งเป็นฟังก์ชั่นสำหรับการหลับ ตามชื่อเลยครับ
+                        โปรแกรมจะหยุดนิ่งไปตามจำนวนวินาทืีที่เราใส่เข้าไปซึ่งตามตัวอย่างผมใส่เข้าไป 5 นัั่นก็คือ 5
+                        วินาทีหลังจาก 5 วินาทีนั้น ผมก็จะทำการให้มันวนลูปแบบไม่มีวันจบเพียงแค่ใส่ <span
+                            style="font-weight: 600;">True</span> ลงไปในส่วนของ Condition ของ Loop และมันก็จะแสดง
+                        "Hello, World" แบบไม่มีวันจบออกมา หากต้องการที่จะหยุดมันให้กด <span
+                            style="font-weight: 600;">CTRL - C</span> พร้อมกันมันก็จะหยุดลงครับ
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/7a0998fd10a52ac982a8e82e64dd3ae4.js"></script>
+                </div>
+            </section>
+            <section id="three">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การประยุกต์ใช้งานการวนลูปแบบ FOR</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>ในตัวอย่างนี้เป็นการประยุกต์ใช้งานเพื่อสร้างกล่องด้วยการกำหนด <span
+                            style="font-weight: 600;">ROW</span> และ <span style="font-weight: 600;">COLUMN</span>
+                        ที่รับมาจากตัวแปรที่มีการรับค่าผ่านฟังก์ชั่น <span style="font-weight: 600;">input()</span>
+                        หลังจากนั้นจะทำการวนลูปสองชั้นโดยชั้นแรกจะเป็นชั้นของ row
+                        ซึ่งจะทำการนับไปตามจำนวนของแต่ละรอบที่รับค่ามา
+                        หลังจากนั้นจะเข้าการวนลูปชั้นสองทันทีในลูปนี้จะไม่ออกจนกว่าจะแสดงค่าออกมาครบตามจำนวนที่ column
+                        ได้ใส่ไว้ เช่น 5 ก็จะแสดงออกมาทั้ง 5 alterisks ซึ่งจะมีการใส่ค่าเพิ่มเติมซึ่งมันคือ <span
+                            style="font-weight: 600;">end=""</span> ซึ่งมันคือตัวที่กำหนดว่าหลังจากแสดงค่าแล้ว​ ณ​
+                        ตอนท้ายจะให้แสดงค่าอะไรอีกและมันก็จะต่อข้อความไปเรื่อยๆ จนกว่าจะเจอ newline
+                        ในตัวอย่างผมก็แค่เพิ่ม Whitespace ไป 1 บรรทัดเพื่อเว้นช่องให้หายใจ
+                        พอแสดงครบทุกอย่างก็จะกลับไปแสดงค่านอกลูปซึ่งเป็น <span
+                            style="font-weight: 600;">print("*")</span> เปล่าๆ ไม่มี end="" ซึ่งสิ่งนี้หมายความว่าเป็น
+                        newline คือขึ้นบรรทัดใหม่นั่นเอง แล้วหลังจากนั้นก็จะเข้าลูปเดิมจนกว่าจะครบตัวเลขที่ได้ใส่ไว้
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/30a001f6a9990dffe7879228801fbc2b.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การประยุกต์ใช้งานการวนลูปแบบ WHILE</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>ในตัวอย่างนี้เป็นการประยุกต์ใช้งานเพื่อสร้างดักข้อมูลที่ไม่ถูกต้องหรือข้อมูลที่เราไม่ต้องการที่จะให้มันเข้ามาคำนวณในเงื่อนไขของเรา
+                        ซึ่งผมสร้างโปรแกรมคำนวณเกรดง่ายๆ แต่ว่าเพิ่ม while loop
+                        เข้ามาเพื่อเช็คความถูกต้องของค่าที่ถูกฟังก์ชั่น <span style="font-weight: 600;">input()</span>
+                        นำเข้ามา ซึ่งจากในโค้ดตัวของ while loop จะมีเงื่อนไขที่ว่า หากคะแนนน้อยกว่า 0 หรือคะแนนมากกว่า
+                        100 ให้แสดงข้อความว่าสิ่งนี้ไม่ถูกต้องและให้ทำการใส่ข้อมูลใหม่ที่ถูกต้อง
+                        หากถูกต้องคุณจะหลุดออกจากลูปนี้ทันที เพื่อเข้าสู่ขั้นตอนการคำนวณเกรดนั่นเอง
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/ca25c8d94963ce36f825a0b8c4d1f975.js"></script>
+                </div>
+            </section>
+            <section id="four">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>คีย์เวิร์ดพิเศษอย่างแรกคือ break</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>
+                        การใช้งานของ <span style="font-weight: 600;">break</span>
+                        นั้นมักจะใช้งานกันในส่วนของการทำงานในลูปซึ่งเมื่อใส่คีย์เวิร์ดไปแล้ว
+                        เมื่อทำงานถึงบรรทัดนี้จะทำให้วนลูปนั้นๆ หยุดทำงานทันที
+                        ซึ่งจากโค้ดที่ผมมีให้ก็คือการวนลูปเพิ่มค่าไปเรื่อยๆ และมีการเช็คเงื่อนไข ถ้าหากค่าเท่ากับ 8
+                        ให้หยุดการทำงานวนลูปทันที
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/1c2bc2e14211741364c0c8eb9de56d33.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>คีย์เวิร์ดพิเศษอย่างที่สองคือ countinue</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>
+                        คีย์เวิร์ด <span style="font-weight: 600;">continue</span> นั้นมีความสามารถตามชื่อเล่นคือ
+                        ทำต่อไป หากเราไปใส่ในการเช็คเงื่อนไขจะพบว่าเมื่อเช็คเงื่อนไขหนึ่งเสร็จมันจะไปเช็คอีกเงื่อนไข
+                        นั่นเป็นสิ่งที่ countinue ทำกับโปรแกรมนั่นเอง
+                        จากโค้ดของผม ผมได้วนลูปด้วย for loop แล้ววนจนกว่าจะครบ 20
+                        และเมื่อนับเลขเสร็จก็จะมีการเช็คเงื่อนไขว่า counter นั้น % mod ด้วย 2 แล้วมันเท่ากับ 0 ไหม?
+                        ถ้าใช่มันก็แสดงข้อความออกมาบอกว่า "Is even number" และหลังจากนั้นมี continue
+                        เพื่อไปทำงานในส่วนของเงื่อนไขต่อไป ซึ่งเงื่อนไขต่อไปคือเงื่อนไขที่เช็คว่า counter นั้นเท่ากับ 15
+                        ไหม ถ้าเท่ากับ 15 ก็ให้หยุดทำงานทันที ซึ่งจะใช้ คีย์เวิร์ด <span
+                            style="font-weight: 600;">break</span> แต่ถ้าหากไม่ใช่เลยก็จะแสดงข้อความว่า "Is odd number"
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/f2372d4663556cc5460bf64b538d5ad6.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>คีย์เวิร์ดพิเศษอย่างที่สามคือ pass</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>
+                        การใช้งาน <span style="font-weight: 600;">pass</span> นั้นโดยส่วนใหญ่มักจะไม่ได้ใช้กันมากนัก โดย
+                        Usecase จริงๆ ที่ผมแนะนำคือใส่ไว้กับ
+                        Function หรือ Statement ที่เรายังคิด​​​ Logic ของมันยังไม่ออกน่าจะเข้าท่าสุด 5555+
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/aad377b83306ab24169dcdf108e24351.js"></script>
+                    <div class="next-page-container">
+                        <a href="./../pages/condition-statements.html" class="prev-page-button">ย้อนหน้ากลับ</a>
+                        <a href="./../pages/strings.html" class="next-page-button">หน้าต่อไป</a>
+                    </div>
+                </div>
+            </section>
+            <section id="five">
+                <div class="container">
+                    <h3>ติดต่อฉัน</h3>
+                    <p>หากคุณสนใจในผลงานของฉันและต้องการที่จะจ้างงานหรือติดต่อพูดคุยกับฉัน
+                        คุณสามารถติดต่อกับฉันได้ผ่านทางฟอร์มในเว็บไซต์นี้ ซึ่งจะถูกส่งไปที่อีเมลล์ของฉันอีกที</p>
+                    <form method="post" action="#">
+                        <div class="row gtr-uniform">
+                            <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name"
+                                    placeholder="ชื่อ" /></div>
+                            <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email"
+                                    placeholder="อีเมลล์" /></div>
+                            <div class="col-12"><input type="text" name="subject" id="subject" placeholder="หัวข้อ" />
+                            </div>
+                            <div class="col-12"><textarea name="message" id="message" placeholder="ข้อความ"
+                                    rows="6"></textarea></div>
+                            <div class="col-12">
+                                <ul class="actions">
+                                    <li><input type="submit" class="primary" value="ส่งข้อความ" /></li>
+                                    <li><input type="reset" value="รีเซ็ทฟอร์ม" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <section id="footer">
+            <div class="container">
+                <ul class="copyright">
+                    <li>&copy; Untitled. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script src="./../assets/js/jquery.min.js"></script>
+    <script src="./../assets/js/jquery.scrollex.min.js"></script>
+    <script src="./../assets/js/jquery.scrolly.min.js"></script>
+    <script src="./../assets/js/browser.min.js"></script>
+    <script src="./../assets/js/breakpoints.min.js"></script>
+    <script src="./../assets/js/util.js"></script>
+    <script src="./../assets/js/main.js"></script>
+</body>
+
+</html>

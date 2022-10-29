@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>File And Exceptions - Python conclusion by Yongyuth Chuankhuntod</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="./../assets/css/main.css" />
+    <link rel="icon" type="image/x-icon" href="./../assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./../assets/favicon-16x16.png">
+    <link rel="manifest" href="./../assets/site.webmanifest">
+</head>
+
+<body class="is-preload">
+    <section id="header">
+        <header>
+            <span class="image avatar"><img src="./../images/avatar.jpg" alt="" /></span>
+            <h1 id="logo"><a href="./../index.html">ยงยุทธ ชวนขุนทด</a></h1>
+            <p>ทำงานให้ได้เหมือนดั่งธรรมชาติ<br />
+                เพื่อที่จะให้ธรรมชาติพาเราสู่จุดไร้ที่ติ</p>
+        </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="#one" class="active">บทนำ</a></li>
+                <li><a href="#two">การจัดการไฟล์แบบเบื้องต้น</a></li>
+                <li><a href="#three">การใช้ฟังก์ชั่นเพื่อจัดการไฟล์</a></li>
+                <li><a href="#four">การวนลูปเพื่อจัดการไฟล์</a></li>
+                <li><a href="#five">การดักจับความผิดพลาด</a></li>
+                <li><a href="#six">ติดต่อฉัน</a></li>
+            </ul>
+        </nav>
+        <footer>
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </footer>
+    </section>
+    <div id="wrapper">
+        <div id="main">
+            <section id="one">
+                <div class="image main" data-position="center">
+                    <a href="./../index.html#three">
+                        <img src="./../images/thumbnails/lecture-seven-thumbnails.webp" alt="" />
+                    </a>
+                </div>
+                <div class="container">
+                    <header class="major">
+                        <h3 style="color: #8674bd;">การอ่านไฟล์และเขียนไฟล์</h3>
+                        <p>การอ่านไฟล์และเขียนไฟล์ในภาษาไพรธอน
+                        </p>
+                    </header>
+                    <p>ความสามารถ I/O นั้นเป็นสิ่งสำคัญ ถ้าหากมันทำกับไฟล์ได้ด้วยจะดีมาก
+                        ซึ่งไพรธอนนั้นมีความสามารถจัดการกับไฟล์๋ซึ่งสามารถทำให้เราประยุกต์ใช้งานได้หลายอย่าง
+                        ไม่ว่าจะเป็นชื่อหรือคะแนน
+                        เวลาทำเกมหรือว่าโปรแกรมที่เอาไว้เก็บค่าอะไรก็ตามที่มันเป็นชั่วคราวนั้นมีประโยชน์เป็นอย่างมาก</p>
+                </div>
+            </section>
+            <section id="two">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>พื้นฐานของการจัดการไฟล์</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>การจัดการไฟล์นั้นมีหลายโหมดในการจัดการในการจัดการไฟล์ซึ่งโดยหลักๆ จะมีอยู่ <span
+                            style="font-weight: 600;">3 โหมด</span></p>
+                    <p><span style="font-weight: 600;">โหมด READ</span> ตัวย่อใช้งานในไพรธอน <span
+                            style="font-weight: 600;">"r"</span>
+                        ซึ่งโหมดนี้สามารถทำได้แค่อ่านไฟล์ซึ่งจะไม่สามารถเขียนไฟล์ได้</p>
+                    <p><span style="font-weight: 600;">โหมด WRITE</span> ตัวย่อใช้งานในไพรธอน <span
+                            style="font-weight: 600;">"w"</span>
+                        ซึ่งโหมดนี้สามารถทำได้แค่อ่านเขียนไฟล์ซึ่งจะไม่สามารถอ่านไฟล์ได้</p>
+                    <p><span style="font-weight: 600;">โหมด APPEND</span> ตัวย่อใช้งานในไพรธอน <span
+                            style="font-weight: 600;">"a"</span>
+                        ซึ่งโหมดนี้สามารถทำได้แค่เพิ่มข้อมูลเข้าไปหลังสุดของข้อมูลที่ถูกเขียน</p>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การเขียนไฟล์แบบเบื้องต้น</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>การเขียนไฟล์นั้นจะใช้โหมด <span style="font-weight: 600;">"w"</span>
+                        ซึ่งเป็นโหมดไว้สำหรับการเขียนไฟล์ ซึ่งเมื่อทำเสร็จคุณจำเป็นต้อง <span
+                            style="font-weight: 600;">.close()</span></p>
+                    <script src="https://gist.github.com/Yothgewalt/7e3485f0ace456b4c26f22d1cd26443e.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การอ่านไฟล์แบบเบื้องต้น</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>การอ่านไฟล์นั้นจะใช้โหมด <span style="font-weight: 600;">"r"</span>
+                        ซึ่งเป็นโหมดไว้สำหรับการอ่านไฟล์ ซึ่งเมื่อทำเสร็จคุณจำเป็นต้อง <span
+                            style="font-weight: 600;">.close()</span></p>
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/3a9aa359991ccade1f68bc4ce4d5213f.js"></script>
+                </div>
+            </section>
+            <section id="three">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การใช้ฟังก์ชั่นเพื่อจัดการไฟล์</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>ฟังก์ชั่น <span style="font-weight: 600;">.readline()</span>
+                        เป็นฟังก์ชั่นที่เอาไว้อ่านไฟล์แบบเรียงตามบรรทัด ซึ่งในตัวอย่างนี้คือการออกไฟล์บรรทัดที่ 1 ถึง 3
+                        ของไฟล์ <span style="font-weight: 600;">"philosophers.txt"</span>
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/8ddb466f40c7c27ab7c6b7bdd77c6442.js"></script>
+                    <hr />
+                    <p>ฟังก์ชั่น <span style="font-weight: 600;">.rstrip()</span>
+                        เป็นฟังก์ชั่นที่เอาตัดข้อความด้านหลังสุดของตัวแปรซึ่งได้สอนไว้ในบทของสตริงแล้วซึ่งในไฟล์ในการที่มันเว้นวรรคเป็นอีกบรรทัดได้เพราะว่ามันมี
+                        <span style="font-weight: 600;">"\n"</span>
+                        อยู่ข้างหลังของข้อความซึ่งเวลาเราแสดงออกมามันจะออกมาด้วย​
+                        ซึ่งมันดูไม่ดีและไม่สวยจึงต้องตัดออกนั่นเอง
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/66e7dcfd4cb3ff48b9ae2c2270cbd54d.js"></script>
+                    <hr />
+                    <p>ฟังก์ชั่น <span style="font-weight: 600;">.input()</span>หก
+                        เป็นฟังก์ชั่นที่เอาไว้รับค่าจากแป้นพิมพ์ซึ่งได้สอนใช้ไปตั้งแต่บทแรกๆ
+                        แล้วซึ่งคุณสามารถนำมาใช้งานกับการจัดการไฟล์ได้
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/16ebe2e665dc2597daa94f004ea9ac29.js"></script>
+                </div>
+            </section>
+            <section id="four">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การวนลูปเพื่อจัดการไฟล์</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>
+                        <span style="font-weight: 600;">การวนลูปแบบ FOR</span>
+                        เพื่อจัดการไฟล์ซึ่งในตัวอย่างเป็นการเขียนจำนวนการเซลลงไปในไฟล์ <span
+                            style="font-weight: 600;">sales.txt</span>
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/6df2ff61b04c32942f7a71de735ed3c4.js"></script>
+                    <hr />
+                    <p>
+                        <span style="font-weight: 600;">การวนลูปแบบ WHILE</span>
+                        เพื่อจัดการไฟล์ซึ่งในตัวอย่างเป็นอ่านข้อมูลเซลในไฟล์ <span
+                            style="font-weight: 600;">sales.txt</span>
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/c36328a39119abe90d14532ca89643f6.js"></script>
+                </div>
+            </section>
+            <section id="five">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การดักจับความผิดพลาด</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>คุณสามารถดักความผิดพลาดที่จะเกิดขึ้นได้ด้วย 2 คีย์เวิร์ดนั่นก็คือ <span
+                            style="font-weight: 600;">try และ except</span> ซึ่งในส่วนของ try
+                        จะเป็นส่วนของใส่โค้ดที่จะทำงานไว้ซึ่งจะถูกครอบไว้โดย try อีกที ซึ่งหลังจากเสร็จก็เขียน<span
+                            style="font-weight: 600;">except</span> เพื่อดักจับความผิดพลาดซึ่งในตัวอย่างนี้ <span
+                            style="font-weight: 600;">ValueError</span> และยังมีอีกหลายๆ
+                        อย่างซึ่งคุณสามารถดูเพิ่มเติมได้ที่นี่ <a
+                            href="https://docs.python.org/3/library/exceptions.html" class="hyperlink-about-me">ดู</a>
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/5c738b74d03e39665f74afac272e8f32.js"></script>
+                </div>
+            </section>
+            <section id="six">
+                <div class="container">
+                    <h3>ติดต่อฉัน</h3>
+                    <p>หากคุณสนใจในผลงานของฉันและต้องการที่จะจ้างงานหรือติดต่อพูดคุยกับฉัน
+                        คุณสามารถติดต่อกับฉันได้ผ่านทางฟอร์มในเว็บไซต์นี้ ซึ่งจะถูกส่งไปที่อีเมลล์ของฉันอีกที</p>
+                    <form method="post" action="#">
+                        <div class="row gtr-uniform">
+                            <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name"
+                                    placeholder="ชื่อ" /></div>
+                            <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email"
+                                    placeholder="อีเมลล์" /></div>
+                            <div class="col-12"><input type="text" name="subject" id="subject" placeholder="หัวข้อ" />
+                            </div>
+                            <div class="col-12"><textarea name="message" id="message" placeholder="ข้อความ"
+                                    rows="6"></textarea></div>
+                            <div class="col-12">
+                                <ul class="actions">
+                                    <li><input type="submit" class="primary" value="ส่งข้อความ" /></li>
+                                    <li><input type="reset" value="รีเซ็ทฟอร์ม" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <section id="footer">
+            <div class="container">
+                <ul class="copyright">
+                    <li>&copy; Untitled. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script src="./../assets/js/jquery.min.js"></script>
+    <script src="./../assets/js/jquery.scrollex.min.js"></script>
+    <script src="./../assets/js/jquery.scrolly.min.js"></script>
+    <script src="./../assets/js/browser.min.js"></script>
+    <script src="./../assets/js/breakpoints.min.js"></script>
+    <script src="./../assets/js/util.js"></script>
+    <script src="./../assets/js/main.js"></script>
+</body>
+
+</html>

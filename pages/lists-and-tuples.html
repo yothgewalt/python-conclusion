@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Condition Statements - Python conclusion by Yongyuth Chuankhuntod</title>
+    <title>Lists And Tuples - Python conclusion by Yongyuth Chuankhuntod</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="./../assets/css/main.css" />
@@ -25,9 +25,8 @@
             <ul>
                 <li><a href="#one" class="active">บทนำ</a></li>
                 <li><a href="#two">เงื่อนไขแบบเบื้องต้น</a></li>
-                <li><a href="#three">เงื่อนไขในเงื่อนไข</a></li>
-                <li><a href="#four">เงื่อนไขหลายเงื่อนไข</a></li>
-                <li><a href="#five">ติดต่อฉัน</a></li>
+                <li><a href="#three">เงื่อนไขหลายเงื่อนไข</a></li>
+                <li><a href="#four">ติดต่อฉัน</a></li>
             </ul>
         </nav>
         <footer>
@@ -45,12 +44,12 @@
             <section id="one">
                 <div class="image main" data-position="center">
                     <a href="./../index.html#three">
-                        <img src="./../images/thumbnails/lecture-three-thumbnails.webp" alt="" />
+                        <img src="./../images/thumbnails/lecture-eight-thumbnails.webp" alt="" />
                     </a>
                 </div>
                 <div class="container">
                     <header class="major">
-                        <h3 style="color: #59b064;">การเช็คเงื่อนไขเพื่อให้ได้ผลลัพธ์</h3>
+                        <h3 style="color: #ae7950;">การใช้งานตัวแปรแบบลิสต์</h3>
                         <p>การเช็คเงื่อนไขเพื่อหาค่าในภาษาไพรธอน
                         </p>
                     </header>
@@ -66,7 +65,7 @@
                         <h4>การเช็คเงื่อนไขแบบเบื้องต้น</h4>
                         <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
                     </header>
-                    <p>การเช็คเงื่อนไขนั้นเราจะใช้คำที่มีชื่อว่า <span style="font-weight: 600;">if</span> หรือแปลว่า
+                    <p>การเช็คเงื่ิอนไขนั้นเราจะใช้คำที่มีชื่อว่า <span style="font-weight: 600;">if</span> หรือแปลว่า
                         "ถ้า"
                         ซึ่งหลังจากนั้นเราจะทำการใส่ค่าหนึ่งลงไปเพื่อเปรียบเทียบโดยใช้เครื่องหมายการเปรียบเทียบกับอีกค่าหนึ่งตามตัวอย่างที่แนบมา
                         ซึ่งถ้าหากเขียนเงื่อนไขเสร็จเราจะทำการเพิ่ม&nbsp;&nbsp;&nbsp;&nbsp;
@@ -111,7 +110,7 @@
                         <h4>การเช็คเงื่อนไขแบบซ้อนกัน</h4>
                         <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
                     </header>
-                    <p>คุณสามารถเพิ่มเงื้อนไขลงไปในเงื่อนไขได้อีกทีหนึ่ง​​ ซึ่งไม่เกิดปัญหาอะไร
+                    <p>คุณสามารถเพิ่มเงื่อนไขลงไปในเงื่อนไขได้อีกทีหนึ่ง​​ ซึ่งไม่เกิดปัญหาอะไร
                         คุณสามารถทำกี่ชั้นก็ได้แต่ไม่น่าดี ซึ่งผมจะไม่พูดถึงเรื่อง <span
                             style="font-weight: 600;">Performance</span>
                         จากโค้ดสังเกตว่าผมมีการเพิ่มเงื่อนไขลงไปในส่วนของโค้ดเดิมซึ่งมันก็จะแสดง คำว่า "Void" ออกมาหาก
@@ -120,29 +119,6 @@
                             style="font-weight: 600;">"Unauthorized"</span>
                     </p>
                     <script src="https://gist.github.com/Yothgewalt/5ff37caa84643b13df6970a607025092.js"></script>
-                </div>
-            </section>
-            <section id="four">
-                <div class="container">
-                    <header class="major" style="margin-top: 64px;">
-                        <h4>การเช็คเงื่อนไขแบบหลายเงื่อนไข</h4>
-                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
-                    </header>
-                    <p>
-                        การเพิ่มเงื่อนไขที่มากกว่าเงื่อนไขซึ่งจะใช้คีย์เวิร์ด <span
-                            style="font-weight: 600;">elif</span>
-                        ในการทำซึ่งคุณจะเพิ่มกี่เงื่อนไขก็ได้ที่แตกต่างจากเงื่อนไขหลัก ส่วนวิธีการทำงานของมันนั้นคือ
-                        <span style="font-weight: 600;">ถ้าหาก</span> เงื่อนไขที่เช็คอันแรกไม่เป็นจริง
-                        โปรแกรมมันก็จะทำงานในเงื่อนไขถัดไปต่อเลยซึ่งนั่นก็คือ เงื่อนไขใน <span
-                            style="font-weight: 600;">elif</span> นั่นเอง ซึ่งคุณก็ยังสามารถใช้ <span
-                            style="font-weight: 600;">else</span> ได้เหมือนเดิม
-                        ในกรณีที่โปรแกรมไม่พบเงื่อนไขอันใดเลยที่ไม่เป็นจริง
-                    </p>
-                    <script src="https://gist.github.com/Yothgewalt/82e6682f2aa2c02587b544613bb8d6af.js"></script>
-                    <div class="next-page-container">
-                        <a href="./../pages/data-types.html" class="prev-page-button">ย้อนหน้ากลับ</a>
-                        <a href="./../pages/iteration.html" class="next-page-button">หน้าต่อไป</a>
-                    </div>
                 </div>
             </section>
             <section id="five">

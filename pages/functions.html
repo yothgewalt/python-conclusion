@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Functions - Python conclusion by Yongyuth Chuankhuntod</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="./../assets/css/main.css" />
+    <link rel="icon" type="image/x-icon" href="./../assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./../assets/favicon-16x16.png">
+    <link rel="manifest" href="./../assets/site.webmanifest">
+</head>
+
+<body class="is-preload">
+    <section id="header">
+        <header>
+            <span class="image avatar"><img src="./../images/avatar.jpg" alt="" /></span>
+            <h1 id="logo"><a href="./../index.html">ยงยุทธ ชวนขุนทด</a></h1>
+            <p>ทำงานให้ได้เหมือนดั่งธรรมชาติ<br />
+                เพื่อที่จะให้ธรรมชาติพาเราสู่จุดไร้ที่ติ</p>
+        </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="#one" class="active">บทนำ</a></li>
+                <li><a href="#two">การใช้งานฟังก์ชั่นเบื้องต้น</a></li>
+                <li><a href="#three">การเพิ่มค่าให้กับฟังก์ชั่น</a></li>
+                <li><a href="#four">ตัวแปรฟังก์ชั่นที่ออกภายนอก</a></li>
+                <li><a href="#five">ติดต่อฉัน</a></li>
+            </ul>
+        </nav>
+        <footer>
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </footer>
+    </section>
+    <div id="wrapper">
+        <div id="main">
+            <section id="one">
+                <div class="image main" data-position="center">
+                    <a href="./../index.html#three">
+                        <img src="./../images/thumbnails/lecture-six-thumbnails.jpg" alt="" />
+                    </a>
+                </div>
+                <div class="container">
+                    <header class="major">
+                        <h3 style="color: #aa805d;">การใช้งานฟังก์ชั่นและการประยุกต์</h3>
+                        <p>การใช้งานฟังก์ชั่นและการประยุกต์ในไพรธอน
+                        </p>
+                    </header>
+                    <p>การใช้งานฟังก์ชั่นนั้นมีประโยชน์เป็นอย่างมากในการแยกโค้ดเพื่อจัดระเบียบการเขียนโค้ดของเราและยังเพิ่มวิธีการเขียนโค้ดแบบใหม่ๆ
+                        อีกด้วย ทำให้เกิดวิธีการทำงานใหม่ขึ้นๆ ซึ่งมีประโยชน์อย่างมาก
+                        และเป็นอีกหนึ่งสิ่งที่เราจะได้ใช้กันทุกวันเมื่อได้เขียนโปรแกรม ซึ่งมันจะสอดแทรกไปทุกๆ
+                        ที่ของโปรแกรม</p>
+                </div>
+            </section>
+            <section id="two">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การใช้งานฟังก์ชั่นเบื้องต้น</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>การเขียนโปรแกรมแบบฟังก์ชั่นนั้นทำให้เราสามารถจัดระเบียบโค้ดของเราได้ง่ายขึ้นและทำให้เกิดแนวทางใหม่ๆ
+                        ในการเขียนโปรแกรมอีกด้วย ซึ่งหนึงในแนวทางการเขียนนั้นที่ใช้ฟังก์ชั่นร่วมเข้ามาด้วยนั่นก็คือ
+                        <span style="font-weight: 600;">Recursion</span>
+                        แต่เราจะไม่ใช้มันกันในบทเรียนนี้ เพราะมันเป็นบทเรียนแบบเบื้องต้น
+                    </p>
+                    <p><span style="font-weight: 600;">จากตัวอย่าง</span> ผมต้องการให้
+                        การนับเลขหนึ่งถึงสิบและการแสดงผลชื่อของผม มันถูกจัดเก็บไว้ในที่ๆ
+                        หนึ่งและสามารถเรียกใช้อันใดอันหนึ่งก็ได้ หรือใช้ได้ทุกสองอันเลยก็ได้ ผมควรทำอย่างไร?</p>
+                    <script src="https://gist.github.com/Yothgewalt/fbc1e9a4ad66fa022a92e8401ee1cde2.js"></script>
+                    <p><span style="font-weight: 600;">สิ่งที่ผมควรทำคือการใช้งานฟังก์ชั่น</span>
+                        ซึ่งวิธีการใช้งานฟังก์ชั่นนั้นไม่ยากเนื่องจากมีการใช้คีย์เวิร์ดแค่ <span
+                            style="font-weight: 600;">def</span>
+                        ตามด้วยชื่อฟังก์ชั่นและวงเล็บปิดท้่ายที่ติดกับชื่อของฟังก์ชั่น
+                        ซึ่งคุณสามารถดูได้จากตามตัวอย่างด้านล่าง ซึ่งวิธีเรียกใช้งาน
+                        ผมก็จะสามารถเรียกใช้โดยเรียกชื่อฟังก์ชั่นพร้อมวงเล็บได้เลย เช่น <span
+                            style="font-weight: 600;">one_to_ten()</span> หรือ <span
+                            style="font-weight: 600;">my_name()</span> ซึ่งผมไม่จำเป็นต้องเรียกทั้ง <span
+                            style="font-weight: 600;">สองฟังก์ชั่น</span> เมื่อผมประกาศแล้ว ผมสามารถเรียกอันใดหนึ่งก็ได้
+                        ซึ่งอันที่ <span style="font-weight: 600;">ไม่ได้เรียก</span>
+                        ก็จะไม่ถูกทำงานแต่โค้ดตรงนั้นยังอยู่และเราสามารถเรียกตอนไหนก็ได้</p>
+                    <script src="https://gist.github.com/Yothgewalt/25dac8d0bed77113133509d5e4698416.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>ตัวแปรภายในฟังก์ชั่น</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>
+                        การนำตัวแปรภายในฟังก์ชั่นมาใช้งานนั้น <span
+                            style="font-weight: 600;">ไม่เป็นสิ่งที่ทำไม่ได้</span>
+                        แต่ <span style="font-weight: 600;">ไม่ใช่ว่าเราจะทำไม่ได้</span> ซึ่งอยู่ในบทที่เรากำลังอ่านกัน
+                        ซึ่งเป็นคีย์เวิร์ดที่เราต้องจำกันอีกแล้ว
+                        เดี๋ยวเรามาเรียนกันทีหลังนะ
+                        ซึ่งเป็นประโยชน์อย่างมาก โปรดติดตาม
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/6d5c118b5e1bfc5ed928d7d5f800f355.js"></script>
+                </div>
+            </section>
+            <section id="three">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การเพิ่มค่าให้กับฟังก์ชั่น</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>ฟังก์ชั่นนั้นมีความสามารถพิเศษอีกอย่างนั่นก็คือการเพิ่มค่าเข้าไปในวงเล็บซึ่งต่อไปนี้ ผมจะเรียกว่า
+                        <span style="font-weight: 600;">Parameter</span> ซึ่งเจ้า Parameter
+                        นี้เนี่ยเป็นตัวเอาไว้ใส่ค่าลงไปในฟังก์ชั่นเพื่อที่ฟังก์ชั่นจะนำไปใช้งานหรือคำนวณอะไรต่อของมันในฟังก์ชั่นของมัน
+                        ซึ่งเราสามารถประกาศตัวแปรแล้วเอาชื่อตัวแปรเข้าไปใส่ได้ตามปกติเลย
+                    </p>
+                    <p>
+                        <span style="font-weight: 600;">เพิ่มเติมสำหรับคีย์เวิร์ด Return</span>
+                        คีย์เวิร์ดนี้เป็นคีย์เวิร์ดไว้ใช้สำหรับจบการทำงานของฟังก์ชั่นซึ่งคุณสามารถเพิ่มค่าที่ต้องการให้มันคืนค่ากลับไปได้ด้วย
+                        อย่างเช่น ผมประกาศตัวแปรชื่อ <span style="font-weight: 600;">name</span>
+                        และผมให้ค่ามันเป็นฟังก์ชั่นของผมที่ <span style="font-weight: 600;">return "yongyuth"</span>
+                        พอจบการทำงานตัวแปร name ที่ผมตั้งไว้ก็จะกลายเป็นสตริงเพราะได้รับการคืนค่ามาจากฟังก์ชั่นนั่นเอง
+                        ถ้าคิดไม่ออก ให้คิดถึงฟังก์ชั่น <span style="font-weight: 600;">input()</span>
+                        เวลาเราประกาศตัวแปรแล้วเราพิมพ์ค่าลงไป ค่ามันกลับเข้ามาในตัวแปรได้ไงก็ประมาณนั้นครับ
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/5e0ef8c8e92e3e25bd1cf0d70dd6f996.js"></script>
+                </div>
+            </section>
+            <section id="four">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>ตัวแปรฟังก์ชั่นที่ออกภายนอก</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>คุณสามารถเอาตัวแปรภายในฟังก์ชั่นไปใช้งานภายนอกได้ซึ่งจะใช้คีย์เวิร์ด <span
+                            style="font-weight: 600;">global</span> และก็ตามด้วยชื่อตัวแปรที่คุณต้องการ
+                        และหลังจากนั้นคุณก็สามารถนำไปใช้งานภายนอกฟังก์ชั่นได้เลย <span
+                            style="font-weight: 600;">ตามตัวอย่างข้างล่าง</span></p>
+                    <script src="https://gist.github.com/Yothgewalt/eb4f7ce7ad3543ae987a4a42176d753d.js"></script>
+                    <div class="next-page-container">
+                        <a href="./../pages/strings.html" class="prev-page-button">ย้อนหน้ากลับ</a>
+                        <a href="./../pages/file-and-exceptions.html" class="next-page-button">หน้าต่อไป</a>
+                    </div>
+                </div>
+            </section>
+            <section id="five">
+                <div class="container">
+                    <h3>ติดต่อฉัน</h3>
+                    <p>หากคุณสนใจในผลงานของฉันและต้องการที่จะจ้างงานหรือติดต่อพูดคุยกับฉัน
+                        คุณสามารถติดต่อกับฉันได้ผ่านทางฟอร์มในเว็บไซต์นี้ ซึ่งจะถูกส่งไปที่อีเมลล์ของฉันอีกที</p>
+                    <form method="post" action="#">
+                        <div class="row gtr-uniform">
+                            <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name"
+                                    placeholder="ชื่อ" /></div>
+                            <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email"
+                                    placeholder="อีเมลล์" />
+                            </div>
+                            <div class="col-12"><input type="text" name="subject" id="subject" placeholder="หัวข้อ" />
+                            </div>
+                            <div class="col-12"><textarea name="message" id="message" placeholder="ข้อความ"
+                                    rows="6"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <ul class="actions">
+                                    <li><input type="submit" class="primary" value="ส่งข้อความ" /></li>
+                                    <li><input type="reset" value="รีเซ็ทฟอร์ม" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <section id="footer">
+            <div class="container">
+                <ul class="copyright">
+                    <li>&copy; Untitled. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script src="./../assets/js/jquery.min.js"></script>
+    <script src="./../assets/js/jquery.scrollex.min.js"></script>
+    <script src="./../assets/js/jquery.scrolly.min.js"></script>
+    <script src="./../assets/js/browser.min.js"></script>
+    <script src="./../assets/js/breakpoints.min.js"></script>
+    <script src="./../assets/js/util.js"></script>
+    <script src="./../assets/js/main.js"></script>
+</body>
+
+</html>

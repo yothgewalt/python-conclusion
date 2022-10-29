@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Strings - Python conclusion by Yongyuth Chuankhuntod</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="./../assets/css/main.css" />
+    <link rel="icon" type="image/x-icon" href="./../assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./../assets/favicon-16x16.png">
+    <link rel="manifest" href="./../assets/site.webmanifest">
+</head>
+
+<body class="is-preload">
+    <section id="header">
+        <header>
+            <span class="image avatar"><img src="./../images/avatar.jpg" alt="" /></span>
+            <h1 id="logo"><a href="./../index.html">ยงยุทธ ชวนขุนทด</a></h1>
+            <p>ทำงานให้ได้เหมือนดั่งธรรมชาติ<br />
+                เพื่อที่จะให้ธรรมชาติพาเราสู่จุดไร้ที่ติ</p>
+        </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="#one" class="active">บทนำ</a></li>
+                <li><a href="#two">ตำแหน่งของสตริง</a></li>
+                <li><a href="#three">ฟังก์ชั่นที่ใช้งานกับสตริง</a></li>
+                <li><a href="#four">เพลสโฮเดอร์กับสตริง</a></li>
+                <li><a href="#five">เนื้อหา สตริงเพิ่มเติม</a></li>
+                <li><a href="#six">ติดต่อฉัน</a></li>
+            </ul>
+        </nav>
+        <footer>
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+        </footer>
+    </section>
+    <div id="wrapper">
+        <div id="main">
+            <section id="one">
+                <div class="image main" data-position="center">
+                    <a href="./../index.html#three">
+                        <img src="./../images/thumbnails/lecture-five-thumbnails.webp" alt="" />
+                    </a>
+                </div>
+                <div class="container">
+                    <header class="major">
+                        <h3 style="color: #6ab3ba;">การจัดการสตริงและการดึงข้อมูล</h3>
+                        <p>การจัดการสตริงและดึงข้อมูลแบบเบื้องต้น
+                        </p>
+                    </header>
+                    <p>การจัดการสตริงนั้นถือว่าเป็นสิ่งสำคัญในการเขียนโปรแกรมซึ่งจะมีในหลายๆ
+                        เหตุการณ์ที่เราต้องใช้งานมันไม่ว่าจะเป็นการเช็คคำต้องห้าม เช่น พวกคำหยาบ, คำเหยียดด เป็นต้น
+                        หรืิอการเช็คความยาวของตัวอักษรทั้งหมด เพื่อจำกัด การใส่ชื่อของผู้ใช้งาน และอื่นๆ
+                        อีกมากมายที่เราจะต้องได้ใช้งานมัน</p>
+                </div>
+            </section>
+            <section id="two">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>ตำแหน่งของสตริง</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>ตำแหน่งของสตริงนั้นเป็นเหมือนกับการนับตัวเลขนั่นก็คือเริ่มจาก <span
+                            style="font-weight: 600;">0</span>
+                        ผมจะยกตัวอย่างข้อความหนึ่งชุดและจะอธิบายว่าการนับตำแหน่งนั้นเป็นอย่างไร?
+                    </p>
+                    <p>
+                        <span style="font-weight: 600;">"Deutschland"</span> คำนี้จะมีอยู่ 11 ตำแหน่งตามตัวอักษรของมัน
+                        ซึ่งตำแหน่งแรกมันจะเริ่มที่ 0 นั่นก็คือตัว <span style="font-weight: 600;">"D"</span>
+                        และตำแหน่งถัดไปของมันคือ 1 นั่นก็คือตัว <span style="font-weight: 600;">"e"</span> ง่ายๆ
+                        ครับวิธีนับตำแหน่งของสตริงก็คือเริ่มจาก 0 แล้วก็นับตัวอักษรไปเรื่อยๆ
+                        จนกว่าจะหมดและคุณจะได้ตำแหน่งทั้งหมดของมัน เช่นข้อความนี้มีทั้งหมด <span
+                            style="font-weight: 600;">11</span> ตัวอักษร
+                    </p>
+                    <p>
+                        โดยจากโค้ดผมจะประกาศตัวแปรหนึ่งขึ้นมาเป็นสตริงซึ่งจะเหมือนกับข้อความที่ผมได้ยกตัวอย่างไปก่อนหน้านี้ก็คือคำว่า
+                        <span style="font-weight: 600;">"Deutschland"</span> และก็ลองดึงตัวอักษรในตำแหน่งที่ 0 กับ 1
+                        ด้วยการใส่ <span style="font-weight: 600;">Square Brackets หรือ
+                            []</span> เข้าไปหลังชื่อตัวแปรของเราและใส่ตัวเลขตำแหน่งของตัวอักษรเข้าไป
+                        ทีนี้เราก็จะได้ตัวอักษรแล้ว
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/3d1c3bea73ff843583e33b23485134a1.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การสไลด์ของสตริง</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>
+                        การสไลด์หรือแปลเป็นไทยก็ <span style="font-weight: 600;">หัน</span>
+                        ซึ่งก่อนหน้านี้ผมได้ทำการอธิบายไปแล้วในส่วนของ <span
+                            style="font-weight: 600;">ตำแหน่งของสตริง</span>
+                        ซึ่งในโค้ดนั้นก็คือการสไลด์เหมือนกันแต่ว่าเป็นการสไลด์แบบ <span
+                            style="font-weight: 600;">หนึ่งตัว</span>
+                        ซึ่งในส่วนของตรงนี้ผมจะอธิบายเกี่ยวกับการสไลด์ที่มากกว่า 1
+                        ตัวแต่ก่อนอื่นเราจะอธิบายส่วนประกอบกันก่อน
+                    </p>
+                    <p>
+                        <span style="font-weight: 600;">variable[ตำแหน่งเริ่มต้น:ตำแหน่งจบ:ข้ามทีละกี่ตัว?]</span> -
+                        ซึ่งในการทำสไลด์แบบหลายตัวจำเป็นต้องมี <span style="font-weight: 600;">Double Colon หรือ
+                            :</span> ในการขั้นของแต่ละส่วน หากคุณกั้นแค่ 1 ส่วน คุณก็จะสามารถใช้ได้แค่ <span
+                            style="font-weight: 600;">จุดเริ่มกับจุดจบ</span> แต่ถ้าหากคุณกั้น 2
+                        ส่วนคุณจะได้รับความสามารถมันมาอีกหนึ่งอย่างคือการอ่านข้าม
+                    </p>
+                    <p>จากตัวอย่างโค้ดผมได้ใช้ข้อความเดิมเป็นตัวอย่างในการอธิบายเพื่อความไม่สับสน
+                        ซึ่งผมจะข้ามการสไลด์แบบหนึ่งตัวไปซึ่งผมได้อธิบายไปแล้ว
+                        แต่เราจะมาดูในส่วนของการสไลด์แบบหลายตัวกันดีกว่า</p>
+                    <p>
+                        <span style="font-weight: 600;">ตัวอย่างการสไลด์แบบหลายตัวอย่างแรก</span> คือการ เอาคำว่า <span
+                            style="font-weight: 600;">"Deutsch"</span> ออกมาเท่านั้นโดยที่ไม่ต้องเอาคำว่า <span
+                            style="font-weight: 600;">"land"</span> ออกมาด้วยโดยการ
+                        เพิ่มจุดเริ่มต้นคือของตัวอักษรที่ต้องการให้ไพรธอนอ่านนั่นก็คือ <span
+                            style="font-weight: 600;">0</span> และจุดจบของคำที่เราต้องการให้มันหยุดก็คือ <span
+                            style="font-weight: 600;">6</span> เมื่อเราแสดงออกมาเราจะได้ <span
+                            style="font-weight: 600;">"Deutsch"</span> ซึ่งจุดเริ่มเราไม่จำเป็นต้องใส่ 0 ก็ได้
+                        หากเราไม่ใส่มันก็จะเริ่มต้นให้ค่าเป็น 0 ซึ่งมีค่าเท่ากันกับการที่เราใส่ 0
+                    </p>
+                    <p>
+                        <span style="font-weight: 600;">ตัวอย่างการสไลด์แบบหลายตัวอย่างสอง</span> คือการ เอาคำว่า <span
+                            style="font-weight: 600;">"Deutsch"</span>
+                        เหมือนกับตัวอย่างอันที่แล้วแต่ว่าจะมีการเพิ่มการอ่านข้ามมา 2 ตัวอักษร
+                        ทำให้การอ่านข้ามครั้งนี้ได้ข้อควาเป็น <span style="font-weight: 600;">"Dushad"</span>
+                        ซึ่งเหมือนเดิมครับเราไม่จำเป็นต้องใส่จุดเริ่มกับจุดจบ หรือจะใส่ก็ได้ถ้าหากคุณ Specific
+                        ที่จะเอาคำในส่วนไหนของประโยคมาใช้งาน
+                    </p>
+                    <p>
+                        <span style="font-weight: 600;">ตัวอย่างการสไลด์แบบหลายตัวอย่างสาม</span>
+                        คือการเอาคำจากข่างหลังสุดโดยใช้เลขติดลบซึ่งเราสามารถใช้เลขติดลบกับ
+                        จุดจบของตัวอักษรและการอ่านข้ามตัวอักษร ได้เหมือนกัน ซึ่งตัวอย่างนี้ผมได้ทำการ <span
+                            style="font-weight: 600;">-1</span> เพื่อสไลด์ตัวอักษรอันเดียวจากหลังสุดออกมานั่นก็คือ <span
+                            style="font-weight: 600;">"d"</span>
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/62ae3ba8226174bbe72ed63b01fb078d.js"></script>
+                </div>
+            </section>
+            <section id="three">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การอ่านจำนวนทั้งหมดของสตริง</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>คุณอาจจะเหนื่อยกับวิธีการนับด้วยตัวเองซึ่งจริงๆ
+                        แล้วมันมีฟังก์ชั่นการอ่านจำนวนตัวอักษรทั้งหมดของสตริงนั่นก็คือ <span
+                            style="font-weight: 600;">len()</span>
+                        ซึ่งวิธีใช้งานก็คือการที่เราเอาชื่อตัวแปรเข้าไปใส่ในวงเล็บของฟังก์ชั่นหลังจากนั้นก็ทำการแสดงผลออกมาโดยใช้ฟังก์ชั่น
+                        <span style="font-weight: 600;">print()</span>
+                        หรือคุณจะไปประกาศตัวแปรก่อนแล้วให้ค่ามันเป็นฟังก์ชั่นการอ่านจำนวนตัวอักษรแล้วค่อยมาแสดงผลก็ได้
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/4ce1ec551c43c41747babe561d7e6984.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>ฟังก์ชั่นเบื้องต้นที่ใช้กับสตริง</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>
+                        ฟังก์ชั่นต่อไปนี้เป็นฟังก์ชั่นที่ใช้กันโดยทั่วไปในการแปลงสตริงหรือข้อความเป็นอย่างอื่น
+                        เช่นตัวเล็กทั้งหมด, ตัวใหญ่ทั้งหมด เป็นต้น คุณไม่จำเป็นต้อง
+                        ประกาศตัวแปรก่อนแล้วค่อยมาใช้งานฟังก์ชั่นก็ได้ วิธีทำคือ
+                        <span style="font-weight: 600;">"Message".upper()</span> เป็นต้น
+                        เราสามารถเพิ่มเข้าไปข้างหลังข้อความได้เลย ตราบใดที่มันคือสตริง
+                    </p>
+                    <p>
+                        <span style="font-weight: 600;">.lower()</span>
+                        คือฟังก์ชั่นแปลงสตริงทั้งหมดให้กลายเป็นตัวเล็กหรือ Lowercase ทั้งหมดในสตริงของตัวมันเอง
+                    </p>
+                    <p>
+                        <span style="font-weight: 600;">.upper()</span>
+                        คือฟังก์ชั่นแปลงสตริงทั้งหมดให้กลายเป็นตัวใหญ่หรือ Uppercase ทั้งหมดในสตริงของตัวมันเอง
+                    </p>
+                    <p>
+                        <span style="font-weight: 600;">.split()</span>
+                        คือฟังก์ชั่นการแยกข้่อความออกจากกันโดยค่าเริ่มต้นของมันนั้นคือ <span
+                            style="font-weight: 600;">Whitespace</span>
+                        หากในข้อความมีเว้นวรรคมันจะถือว่าเป็นการแยกข้อความ หลังจากนั้นมันจะเก็บเข้า เป็นตัวแปรประเภท
+                        List ซึ่งเรายัง​ ณ บทตรงนี้ เรายังสรุปไม่ถึงในส่วนของตรงนั้น เพราะฉะนั้นเราจะชั่งมันไปก่อน
+                        ซึ่งในวงเล็บของฟังก์ชั่น <span style="font-weight: 600;">.split({here})</span>
+                        เราสามารถใส่ข้อความไปได้ว่า เมื่อเจอคำหรือตัวอักษรไหนถึงจะแยกคำ
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/049c38526a9a9de6cfac94ab336c2502.js"></script>
+                    <p>และนี่คือตัวอย่างวิธีการเอาตัวแปรที่ใช้งานฟังก์ชั่น <span
+                            style="font-weight: 600;">.split()</span></p>
+                    <p>ซึ่งถ้าเราใช้การแสดงผลแบบปกติคือ print() ออกมา เราจะพบว่ามันมีติด Square Brackets
+                        มาด้วยแล้วข้างในจะมีข้อความที่เป็นสตริงอีกทีนั่นหมายความ ตอนนี้ ตัวแปร <span
+                            style="font-weight: 600;">splited</span> เป็นตัวแปรประเภทแบบ List แล้ว</p>
+                    <p>วิธีที่จะเอาออกมาเป็นแบบข้อความแบบเวลาที่เราจะ print() กันแบบปกติคือเราต้องใช้ <span
+                            style="font-weight: 600;">FOR</span> ในการลูปเข้าไปเพื่อเอาข้อความในแต่ละส่วนของ List ออกมา
+                        ตามตัวอย่างเลย
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/273f4ae1279d94b75b2221a9e53b8c7c.js"></script>
+                </div>
+            </section>
+            <section id="four">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>ใช้เพลสโฮเดอร์เพื่อแทรกข้อความ</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>การที่จะแทรกข้อความโดยใช้ <span style="font-weight: 600;">"Hello" + ", World"</span> อยู่ตลอดนั้น
+                        คงจะเป็นสิ่งที่น่าเบื่อและดูไม่สวยเอาเสียเลย ถ้าจะใช้ตลอดไป แต่ก็ดู <span
+                            style="font-weight: 600;">Clean Code</span> ในบางกรณี
+                        และก็มีวิธีแทรกข้อความอื่นโดยวันนี้เราจะมีสองหลักที่ใช้กัน นั่นก็คืือใช้ฟังก์ชั่น <span
+                            style="font-weight: 600;">.format()</span> กับใช้สิ่งที่ built-in ของไพรธอนมีมาให้ก็คือ
+                        <span style="font-weight: 600;">%</span>
+                    </p>
+                    <p><span style="font-weight: 600;">ตัวอย่างแรกของการใช้ %</span>
+                        วิธีการใช้คือใช้ร่วมกับสตริงอะไรก็ได้แต่จะมี Placeholder
+                        ตัวแทนของมันซึ่งถ้าหากต้องการแทรกสตริงหรือข้อความจะต้องใช้ <span
+                            style="font-weight: 600;">%s</span> เพื่อบอกมันว่าสิ่งที่จะแทรกลงไปคือสตริงหรือข้อความนะ
+                        หากคุณต้องการแทรกมากกว่า 1 ข้อความ คุณต้องใส่เพิ่มลงไปในตำแหน่งถัดไป ซึ่งการแทรกข้อความลงไป
+                        ว่าจะอยู่ที่ตำแหน่งใด จะทำการอ้างอิงจากการใส่ค่าของมันซึ่งจะเรียงตามการใส่ของเราเลย</p>
+                    <p><span style="font-weight: 600;">ตัวอย่างแรกของการใช้ .format()</span>
+                        วิธีการใช้คือเหมือนกับ <span style="font-weight: 600;">%s</span> คือใช้กับสตริงหรือข้อความได้เลย
+                        และวิธีการใช้งานการแทรกข้อความเหมือนกันเลย แต่ต่างกันตรงที่จะใช้เป็นฟังก์ชั่น <span
+                            style="font-weight: 600;">.format()</span> แทน ซึ่งสามารถดูได้จากตัวอย่างโค้ดได้เลย
+                        แต่การแทนในข้อความนั้นจะใช้เป็น <span style="font-weight: 600;">Curely Brackets หรือ {}
+                        </span> แทนนั่นเอง
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/f774a9eddb68e4d517e18f7e76ea9bae.js"></script>
+                    <p>หากเป็นในกรณีของตัวเลขคุณสามารถใช้ <span style="font-weight: 600;">%d</span>
+                        แทนได้แต่กับของฟังก์ชั่น <span style="font-weight: 600;">.format()</span>
+                        ไม่จำเป็นต้องทำอะไรขอเพียงแค่คุณใส่ตัวแปรเข้าไปตามตำแหน่งของฟังก์ชั่นพอ</p>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>เพลสโฮเดอร์กับการแปลงเลขทศนิยมเป็นสตริง</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>การแสดงเลขทศนิยมนั้นเป็นสิ่งสำคัญมาก
+                        หากต้องการโปรแกรมที่มีความแม่นยำหรือว่าโปรแกรมที่เกี่ยวกับการเงิน
+                        ซึ่งเราสามารถทำให้มันแปลงจากเลขเป็นสตริงหรือข้อความได้และสามารถระบุได้ด้วยว่าจะแสดงกี่ทศนิยม
+                        ซึ่งเราจะใส่ว่า <span style="font-weight: 600;">{:.(จำนวนทศนิยม)f}</span>
+                        ซึ่งในตัวอย่างการแสดงผลครั้งแรก ผมอยากให้แสดงผลค่า <span style="font-weight: 600;">PI</span> แค่
+                        2 ทศนิยม ผมก็จะใส่จำนวนเลขทศนิยมเท่านั้น แต่ถ้าหากผมต้องการให้มันโชว์ 10 ตำแหน่ง
+                        ผมก็แค่ใส่เข้าไป</p>
+                    <p>
+                        <span style="font-weight: 600;">วิธีเพิ่มลูกน้ำหรือ Comma</span> ในกรณีที่ตัวเลขนั้นมีค่ามากกว่า
+                        999 ซึ่งเมื่อเกินมาแล้ว มันจะทำการเติม <span style="font-weight: 600;">Comma หรือ ,</span>
+                        ให้คุณทันทีในตำแหน่งของตัวเลขที่คุณใส่มา โดยใช้วิธี <span
+                            style="font-weight: 600;">{:,.2f}</span> ซึ่งถ้าคุณต้องการเพิ่มจำนวนทศนิยม
+                        คุณแค่เพิ่มเข้าไปแค่นั้น
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/6de96440c318786dcc9e62d4a1fa624e.js"></script>
+                </div>
+            </section>
+            <section id="five">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การใช้งานสตริงเพิ่มเติม</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>คุณสามารถใช้งานสตริงร่วมกับเครื่องหมายคณิตศาสตร์เพื่อแสดงข้อความซ้ำๆ แบบไม่ต้องใช้ <span
+                            style="font-weight: 600;">print()</span> แบบหลายๆ ครั้ง
+                        ทำให้ประหยัดเวลาได้เป็นอย่างมากและช่วยในเรื่องของ <span style="font-weight: 600;">Clean
+                            Code</span> อีกด้วย</p>
+                    <script src="https://gist.github.com/Yothgewalt/c3c1a8d485167f0e18e316c505e1f6ee.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>ฟังก์ชั่นเพิ่มเติมสำหรับสตริง</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>นอกจากนี้แล้วยังมีฟังก์ชั่นอื่นๆ อีกที่มีความสำคัญเหมือนกัน เช่น</p>
+                    <p><span style="font-weight: 600;">.join()</span>
+                        เป็นฟังก์ชั่นที่ทำให้ข้อมูลสามารถเชื่อมต่อกันได้โดยคุณสามารถใส่ตัวอักษรระหว่างกลางของข้อมูลได้ซึ่งถ้าทำ
+                        ทำให้เวลาข้อมูลแสดงออกมาจะมีตัวอักษรที่เราใส่ไว้ขั้นกลางระหว่างข้อมูลทุกอัน ซึ่งสามารถใช้กับ
+                        <span style="font-weight: 600;">List</span> ได้
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/80d676c0597b59e71d4f3ee1189e8188.js"></script>
+                    <hr />
+                    <p><span style="font-weight: 600;">.strip()</span>
+                        เป็นฟังก์ชั่นที่เอาไว้ลบสิ่งที่เรากำหนดว่าอยากให้ลบ ซึ่งถ้าหากเราไม่ใส่อะไรเข้าไปเลย
+                        ค่าเดิมของมันคือ <span style="font-weight: 600;">Whitespace</span>
+                        ซึ่งถ้าหากมีเว้นวรรคมันก็จะลบให้เลยทันที</p>
+                    <p><span style="font-weight: 600;">.rstrip()</span> เป็นฟั่งก์ชั่นที่เหมือนกับ <span
+                            style="font-weight: 600;">.strip()</span>
+                        แต่เป็นการลบสิ่งที่เราต้องการที่อยู่ข้างหลังสุดของสตริงหรือข้อความของเรา
+                        ซึ่งถ้าหากเราไม่ใส่อะไรเข้าไปเลย
+                        ค่าเดิมของมันคือ <span style="font-weight: 600;">Whitespace</span></p>
+                    <p><span style="font-weight: 600;">.lstrip()</span> เป็นฟั่งก์ชั่นที่เหมือนกับ <span
+                            style="font-weight: 600;">.strip()</span>
+                        แต่เป็นการลบสิ่งที่เราต้องการที่อยู่ข้างหน้าสุดของสตริงหรือข้อความของเรา
+                        ซึ่งถ้าหากเราไม่ใส่อะไรเข้าไปเลย
+                        ค่าเดิมของมันคือ <span style="font-weight: 600;">Whitespace</span></p>
+                    <script src="https://gist.github.com/Yothgewalt/cb64775a4cb43e83bf6de95e0e0519fe.js"></script>
+                    <hr />
+                    <p><span style="font-weight: 600;">.find()</span>
+                        เป็นฟังก์ชั่นที่เอาไว้สำหรับหาชุดคำหรือตัวอักษรอะไรก็ตามที่อยู่เราใส่ไปในวงเล็บของฟังก์ชั่น
+                        ซึ่งมันจะคืนค่ากลับมาให้เราเป็นตำแหน่งของสตริงหรือข้อความในตัวแปรของเรา
+                        ว่า <span style="font-weight: 600;">ตำแหน่ง</span> ที่เราหาอยู่นั้น คำมันเริ่มที่ตำแหน่งใด</p>
+                    <p><span style="font-weight: 600;">.replace()</span>
+                        เป็นฟังก์ชั่นสำหรับการวางข้อความอื่นแทนข้อความที่เรากำหนดไว้ในฟังก์ชั่นซึ่ง
+                        จะถูกแบ่งออกมาเป็นสองส่วนในวงเล็บ <span style="font-weight: 600;">("คำที่เราจะเปลี่ยน",
+                            "คำใหม่ที่เราต้องการที่จะเปลี่ยน")</span></p>
+                    <p><span style="font-weight: 600;">.endswith()</span>
+                        เป็นฟังก์ชั่นที่เอาไว้เช็คค่าว่าสิ่งที่เรากำหนดลงไปในวงเล็บนั้นกับตัวอักษรแรกของตัวแปรที่เราได้ใช้ฟังก์ชั่นนี้ด้วย
+                        มันคืออันเดียวกันหรือไม่ ซึ่งจะคืนค่ากลับมาเป็น <span style="font-weight: 600;">Boolean</span>
+                    </p>
+                    <p><span style="font-weight: 600;">.endswith()</span>
+                        เป็นฟังก์ชั่นที่เอาไว้เช็คค่าว่าสิ่งที่เรากำหนดลงไปในวงเล็บนั้นกับตัวอักษรตัวสุดท้ายของตัวแปรที่เราได้ใช้ฟังก์ชั่นนี้ด้วย
+                        มันคืออันเดียวกันหรือไม่ ซึ่งจะคืนค่ากลับมาเป็น <span style="font-weight: 600;">Boolean</span>
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/671280214a0ccd0d4a8e40fd60edb29e.js"></script>
+                    <hr />
+                    <p><span style="font-weight: 600;">.isalnum()</span>
+                        เป็นฟังก์ชั่นที่เอาไว้เช็คว่าในสตริงหรือข้อความของตัวแปรเรานั้นมีแต่ตัวอักษรกับตัวเลขที่ไม่มีสัญลักษณ์พิเศษหรือเปล่า
+                        ซึ่งจะคืนค่ากลับมาเป็น <span style="font-weight: 600;">Boolean</span></p>
+                    <p><span style="font-weight: 600;">.isalpha()</span>
+                        เป็นฟังก์ชั่นที่เอาไว้เช็คว่าในสตริงหรือข้อความของตัวแปรเรานั้นมีแต่ตัวอักษรหรือเปล่า
+                        ซึ่งจะคืนค่ากลับมาเป็น <span style="font-weight: 600;">Boolean</span></p>
+                    <p><span style="font-weight: 600;">.islower()</span>
+                        เป็นฟังก์ชั่นที่เอาไว้เช็คว่าในสตริงหรือข้อความของตัวแปรเรานั้นเป็นตัวอักษรเล็กทั้งหมดหรือเปล่า
+                        ซึ่งจะคืนค่ากลับมาเป็น <span style="font-weight: 600;">Boolean</span></p>
+                    <p><span style="font-weight: 600;">.isupper()</span>
+                        เป็นฟังก์ชั่นที่เอาไว้เช็คว่าในสตริงหรือข้อความของตัวแปรเรานั้นเป็นตัวอักษรใหญ่ทั้งหมดหรือเปล่า
+                        ซึ่งจะคืนค่ากลับมาเป็น <span style="font-weight: 600;">Boolean</span></p>
+                    <p><span style="font-weight: 600;">.isnumeric()</span>
+                        ป็นฟังก์ชั่นที่เอาไว้เช็คว่าในสตริงหรือข้อความของตัวแปรเรานั้นมีแต่ตัวเลขหรือเปล่า
+                        ซึ่งจะคืนค่ากลับมาเป็น <span style="font-weight: 600;">Boolean</span></p>
+                    <p><span style="font-weight: 600;">.isspace()</span>
+                        ป็นฟังก์ชั่นที่เอาไว้เช็คว่าในสตริงหรือข้อความของตัวแปรเรานั้นมีการเว้นวรรคหรือเปล่า
+                        ซึ่งจะคืนค่ากลับมาเป็น <span style="font-weight: 600;">Boolean</span></p>
+                    <script src="https://gist.github.com/Yothgewalt/bbed818f87c6b768f9001717e7eb4111.js"></script>
+                    <div class="next-page-container">
+                        <a href="./../pages/iteration.html" class="prev-page-button">ย้อนหน้ากลับ</a>
+                        <a href="./../pages/functions.html" class="next-page-button">หน้าต่อไป</a>
+                    </div>
+                </div>
+            </section>
+            <section id="six">
+                <div class="container">
+                    <h3>ติดต่อฉัน</h3>
+                    <p>หากคุณสนใจในผลงานของฉันและต้องการที่จะจ้างงานหรือติดต่อพูดคุยกับฉัน
+                        คุณสามารถติดต่อกับฉันได้ผ่านทางฟอร์มในเว็บไซต์นี้ ซึ่งจะถูกส่งไปที่อีเมลล์ของฉันอีกที</p>
+                    <form method="post" action="#">
+                        <div class="row gtr-uniform">
+                            <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name"
+                                    placeholder="ชื่อ" /></div>
+                            <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email"
+                                    placeholder="อีเมลล์" /></div>
+                            <div class="col-12"><input type="text" name="subject" id="subject" placeholder="หัวข้อ" />
+                            </div>
+                            <div class="col-12"><textarea name="message" id="message" placeholder="ข้อความ"
+                                    rows="6"></textarea></div>
+                            <div class="col-12">
+                                <ul class="actions">
+                                    <li><input type="submit" class="primary" value="ส่งข้อความ" /></li>
+                                    <li><input type="reset" value="รีเซ็ทฟอร์ม" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <section id="footer">
+            <div class="container">
+                <ul class="copyright">
+                    <li>&copy; Untitled. All rights reserved.</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script src="./../assets/js/jquery.min.js"></script>
+    <script src="./../assets/js/jquery.scrollex.min.js"></script>
+    <script src="./../assets/js/jquery.scrolly.min.js"></script>
+    <script src="./../assets/js/browser.min.js"></script>
+    <script src="./../assets/js/breakpoints.min.js"></script>
+    <script src="./../assets/js/util.js"></script>
+    <script src="./../assets/js/main.js"></script>
+</body>
+
+</html>
