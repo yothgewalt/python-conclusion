@@ -2813,7 +2813,6 @@ input[type="button"]:disabled,
   -webkit-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
-  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
   color: #d2f2e9;
   height: 100%;
   overflow-y: auto;

@@ -14,7 +14,7 @@
 </head>
 
 <body class="is-preload">
-    <section id="header">
+    <section id="header" style="background-color: #bc9679;">
         <header>
             <span class="image avatar"><img src="./../images/avatar.jpg" alt="" /></span>
             <h1 id="logo"><a href="./../index.html">ยงยุทธ ชวนขุนทด</a></h1>
@@ -24,9 +24,11 @@
         <nav id="nav">
             <ul>
                 <li><a href="#one" class="active">บทนำ</a></li>
-                <li><a href="#two">เงื่อนไขแบบเบื้องต้น</a></li>
-                <li><a href="#three">เงื่อนไขหลายเงื่อนไข</a></li>
-                <li><a href="#four">ติดต่อฉัน</a></li>
+                <li><a href="#two">ดิกชันนารีแบบเบื้องต้น</a></li>
+                <li><a href="#three">การวนลูปและฟังก์ชั่นในดิกชันนารี</a></li>
+                <li><a href="#four">เซตแบบเบื้องต้น</a></li>
+                <li><a href="#five">การจัดอันดับวัตถุ</a></li>
+                <li><a href="#six">ติดต่อฉัน</a></li>
             </ul>
         </nav>
         <footer>
@@ -50,78 +52,219 @@
                 <div class="container">
                     <header class="major">
                         <h3 style="color: #ae7950;">การใช้งานตัวแปรแบบดิกชันนารีและเซต</h3>
-                        <p>การเช็คเงื่อนไขเพื่อหาค่าในภาษาไพรธอน
+                        <p>การใช้งานดิกชันนารีและเซตในภาษาไพรธอน
                         </p>
                     </header>
-                    <p>การเช็คเงื่อนไขเป็นสิ่งที่ต้องใช้งานอยู่ประจำเมื่อได้ทำงานด้านนี้ไม่ว่าจะใหญ่หรือเล็ก
-                        มันทำให้เราสามารถแยกการคำนวณของแต่ละ Case ได้อย่างเช่น แยกคนที่ทำงานเกิน 40 ชั่วโมงขึ้นไป
-                        หากคนที่ทำงานต่ำกว่า 40 ชั่วโมงจะให้คำนวณอีกแบบเป็นต้น ทำให้เราสามารถแยกสิ่งต่างๆ
-                        ที่เราต้องการให้มันเกิดขึ้นได้อย่างเป็นไปได้</p>
+                    <p>การใช้ดิกชันารีทำให้เราสามารถสร้างสิ่งที่แตกต่างจากลิสต์ได้ตรงที่ <span
+                            style="font-weight: 600;">Dictionary</span> สามารถกำหนด <span style="font-weight: 600;">Key
+                            และ Value</span> ได้ ทำให้เราเวลาเรียกข้อมูลก็จะสามารถเรียกแยกได้เลยระหว่าง Key และ Value
+                        ซึ่งทำให้เกิดการเขียนโปรแกรมรูปแบบใหม่ๆ และช่วยมาแก้ปัญหาในปัญหาในต่างๆ
+                        ที่เกิดขึ้นใหม่และเหมาะสมที่จะใช้งานสิ่งนี้,
+                        เซตถือว่าเป็นคณิตศาสตร์ที่ทุกคนต้องเคยผ่านซึ่งทำให้ทุกคนสามารถเขียนโปรแกรมเพื่อแยกสิ่งที่ซ้ำหรือสามารถควบรวมกับอีกหนึ่งข้อมูลได้
+                    </p>
                 </div>
             </section>
             <section id="two">
                 <div class="container">
                     <header class="major" style="margin-top: 64px;">
-                        <h4>การเช็คเงื่อนไขแบบเบื้องต้น</h4>
+                        <h4>การใช้งานดิกชันนารีแบบเบื้องต้น</h4>
                         <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
                     </header>
-                    <p>การเช็คเงื่ิอนไขนั้นเราจะใช้คำที่มีชื่อว่า <span style="font-weight: 600;">if</span> หรือแปลว่า
-                        "ถ้า"
-                        ซึ่งหลังจากนั้นเราจะทำการใส่ค่าหนึ่งลงไปเพื่อเปรียบเทียบโดยใช้เครื่องหมายการเปรียบเทียบกับอีกค่าหนึ่งตามตัวอย่างที่แนบมา
-                        ซึ่งถ้าหากเขียนเงื่อนไขเสร็จเราจะทำการเพิ่ม&nbsp;&nbsp;&nbsp;&nbsp;
-                        <span style="font-weight: 600;">:
-                            (double-colon)</span> เข้าไปเพื่ิอบอกว่าจบบรรทัดการประกาศเงื่อนไขของ if
-                        ซึ่งในบรรทัดไปหลังจากเราปิดด้วย double-colon นั้นจะเป็นสิ่งที่เราต้องการให้ทำ
-                        เมื่อเงื่อนไขที่เราได้ตั้งมานั้นมันเป็น <span style="font-weight: 600;">จริง (True)</span>
-                        และถ้าหากไม่เป็นจริง การเช็คเงื่อนไขก็จะไปเข้าในส่วนของ <span
-                            style="font-weight: 600;">else</span> เพื่อบอกว่าไม่มีเงื่อนไขใดเข้าเงื่อนไขเลย
+                    <p>การใช้งานดิกชันนารีนั้น ในการประกาศตัวแปรเราจะใช้สัญลักษณ์ <span style="font-weight: 600;">Curely
+                            Brackets หรือ {}</span> ในการประกาศตัวแปรแบบดิกชันนารี
+                        ส่วนการใส่ค่าเข้าไปนั้นจะไม่เหมือนแบบของ​ List หรือ Tuple
+                        ซึ่งการใส่ค่าให้ดิกชันนารีนั้นจะมีสองส่วนด้วยกันคือ <span style="font-weight: 600;">Key</span>
+                        และ <span style="font-weight: 600;">Value</span>
+                        แต่คุณยังสามารถใช้ฟังก์ชั่นอันหนึ่งที่ใช้ได้กับลิสต์เหมือนกันนั่นก็คือ <span
+                            style="font-weight: 600;">del</span> ซึ่งเวลาเรียก Value ออกมาดู
+                        คุณต้องอ้างอิิงถึงคีย์ของมัน เช่น <span style="font-weight: 600;">dict["key"]</span> เป็นต้น
+                        <span style="font-weight: 600;">ตัวอย่างด้านล่าง</span>
                     </p>
-                    <script src="https://gist.github.com/Yothgewalt/a5b6cd30f217e0260d224d3b6300272f.js"></script>
+                    <script src="https://gist.github.com/Yothgewalt/674b78c2cc523a64486099ced7b047aa.js"></script>
                     <hr />
                     <header class="major" style="margin-top: 64px;">
-                        <h4>การเปรียบเทียบที่มากกว่า 1 ค่า</h4>
+                        <h4>การเช็คเงื่อนไขกับดิกชันนารี</h4>
                         <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
                     </header>
-                    <p>
-                        การเช็คเงื่อนไขไม่จำเป็นว่าต้องเปรียบเทียบได้แค่ 1 ค่าเท่านั้น คุณสามารถเปรียบเทียบกี่ค่าก็ได้จะ
-                        5 ค่า หรือ 100 ค่าก็ได้ <span style="font-weight: 600;">(ถ้าคุณไหว)</span>
-                        การเปรียบเทียบที่มากกว่าหนึ่งค่านั้น
-                        หากเป็นการเปรียบเทียบระหว่างสองค่าที่ไม่ใช่การเปรียบเทียบแบบเช็คว่าตัวเองเป็นจริงหรือเท็จนั้น
-                        ต้องใส่ <span style="font-weight: 600;">Parent หรือว่า วงเล็บ -> ()</span>
-                        เพื่อแยกส่วนการคำนวณและทำให้โค้ดอ่านง่ายขึ้น จากโค้ดเราจะใช้ <span
-                            style="font-weight: 600;">AND</span> เป็นตัวเชื่อมระหว่างสองเงื่อนไข ซึ่งเงื่อนไขแรกคือ
-                        <span style="font-weight: 600;">(authentication_service and jwt_authorized)</span>
-                        และเงื่อนไขอีกเงื่อนไขคือการเช็คว่าตัวเองนั้นเป็นจริงหรือเท็จ​ ซึ่งผมใส่ not ลงไป ข้างหน้า <span
-                            style="font-weight: 600;">user_authorized</span> เพื่อบอกว่าสิ่งนี้ต้องเป็น <span
-                            style="font-weight: 600;">False</span> นะไม่ใช่ True
-                        ถ้าหากเราไม่ใส่เวลาเช็คเงื่อนไขมันจะตรวจว่า user_authorized นั้นเป็น True ใช่ไหม?
-                        ซึ่งจากในตัวอย่าง user_authorized ผมเป็น False ซึ่งนั่นมันไม่เป็นจริงแน่นอน
-                        มันก็จะไม่เข้่าเงื่อนไขของเรานั่นเอง เราก็ต้องใส่ <span style="font-weight: 600;">นิเสธ หรือ
-                            not</span> ให้กับตัวมัน และเมื่อเงื่อนไขทั้งสองเป็น True And True มันก็เป็น True ใช่ไหม
-                        ตามตรรกศาสตร์ที่เราเรียนมา หลังจากนั้นมันก็จะทำงานใน if statement ที่เราสร้างขึ้นมา <span
-                            style="font-weight: 600;">(ลืมบอกไม่จำเป็นต้องใส่ else นะจ๊ะใช้ได้เหมือนกัน)</span>
-                    </p>
-                    <script src="https://gist.github.com/Yothgewalt/ef7657e809ff16a043527a489ba06b45.js"></script>
+                    <p>การเช็คเงื่อนไขกับดิกชันนารีนั้น ส่วนมากมักจะใช้เช็คว่าในคีย์ที่เราเจาะจงที่จะเช็คเนี่ย
+                        มีอยู่จริงไหม ถ้ามีอยู่จริงเราจะทำอย่างไรกับมัน <span
+                            style="font-weight: 600;">ตัวอย่างด้านล่าง</span></p>
+                    <script src="https://gist.github.com/Yothgewalt/6b33cb947bfe6e52b8c9cfda529c0335.js"></script>
                 </div>
             </section>
             <section id="three">
                 <div class="container">
                     <header class="major" style="margin-top: 64px;">
-                        <h4>การเช็คเงื่อนไขแบบซ้อนกัน</h4>
+                        <h4>การใช้งานการวนลูปสำหรับดิกชันนารี</h4>
                         <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
                     </header>
-                    <p>คุณสามารถเพิ่มเงื่อนไขลงไปในเงื่อนไขได้อีกทีหนึ่ง​​ ซึ่งไม่เกิดปัญหาอะไร
-                        คุณสามารถทำกี่ชั้นก็ได้แต่ไม่น่าดี ซึ่งผมจะไม่พูดถึงเรื่อง <span
-                            style="font-weight: 600;">Performance</span>
-                        จากโค้ดสังเกตว่าผมมีการเพิ่มเงื่อนไขลงไปในส่วนของโค้ดเดิมซึ่งมันก็จะแสดง คำว่า "Void" ออกมาหาก
-                        user_authorized นั้นเป็นจริง และผมก็สามารถเพิ่ม else ลงไปให้กับ เงื่อนไขชั้นแรกได้่อีกด้วย
-                        หากเงื่อนไขชั้นแรกไม่เป็นจริง โปรแกรมก็จะมาทำงานในส่วนของ Else และแสดงข้อความว่า <span
-                            style="font-weight: 600;">"Unauthorized"</span>
+                    <p>การวนลูปสำหรับดิกชันนารีนั้นมักจะใช้การวนลูปแบบ <span style="font-weight: 600;">FOR</span>
+                        ซึ่งการวนลูปทำให้เราเข้าถึงชื่อของ <span style="font-weight: 600;">Key</span>
+                        ทำให้เราเข้าถึงตัวของ <span style="font-weight: 600;">Value</span> ของคีย์ได้ง่ายขึ้น
+                        ซึ่งสามารถนำไปประยุกต์อะไรในหลายๆ อย่างได้ และอีกทั้งคุณยังใช้ฟังก์ชั่น <span
+                            style="font-weight: 600;">len()</span> สำหรับดูว่ามีกี่ <span
+                            style="font-weight: 600;">Element</span> <span
+                            style="font-weight: 600;">ตัวอย่างด้านล่าง</span></p>
+                    <script src="https://gist.github.com/Yothgewalt/4368efdf7f00cf98669f0fe0183fdbbc.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การใช้งานฟังก์ชั่นสำหรับดิกชันนารี</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>การใช้งานฟังก์ชั่นกับดิกชันนารีนั้นมีอยู่หลายฟังก์ชั่นด้วยกัน
+                        ซึ่งที่หยิิบยกมาเป็นตัวอย่างมีทั้งหมด <span style="font-weight: 600;">7 Methods</span>
+                        แล้วมีอะไรกันบ้างไปดูกัน</p>
+                    <p><span style="font-weight: 600;">.get(item, exception_message)</span>
+                        เป็นฟังก์ชั่นไว้สำหรับดึงค่าของคีย์ที่เราได้เจาะจงไปเอามาซึ่งถ้าหากไม่เจอจะมีการคืนค่ากลับมาเป็น
+                        <span style="font-weight: 600;">Exception</span> ซึ่งเราสามารถปรับเปลี่ยนข้อความได้ด้วย
                     </p>
-                    <script src="https://gist.github.com/Yothgewalt/5ff37caa84643b13df6970a607025092.js"></script>
+                    <p>
+                        <span style="font-weight: 600;">.items()</span>
+                        เป็นฟังก์ชั่นไว้สำหรับดึงค่าทั้งหมดในดิกชันนารีและคืนค่ากลับมาเป็น 2 ตัวนั่นก็คือ <span
+                            style="font-weight: 600;">Key</span> และ <span style="font-weight: 600;">Value</span>
+                        ซึ่งส่วนมากฟังก์ชั่นนี้มักจะใช้กับการวนลูป
+                    </p>
+                    <p>
+                        <span style="font-weight: 600;">.keys()</span> เป็นฟังก์ชั่นที่จะคืนค่าชื่อของ <span
+                            style="font-weight: 600;">Key</span> ทั้่งหมดของดิกชันนารีที่เราได้นำฟังก์ชั่นไปใช้ด้วย
+                    </p>
+                    <p>
+                        <span style="font-weight: 600;">.values</span> นั้นเป็นฟังก์ชั่นที่จะคล้ายๆ กับฟังก์ชั่น <span
+                            style="font-weight: 600;">.keys()</span> แต่ว่าจะเป็นการคืนค่าเป็น <span
+                            style="font-weight: 600;">Value</span> ทั้งหมดของดิกชันนารีแทน
+                    </p>
+                    <p><span style="font-weight: 600;">.pop(item, exception_message)</span>
+                        เป็นฟังก์ชั่นไว้สำหรับลบค่านั้นๆ ที่เราเจาะจงออกจากดิกชันนารีซึ่งจะอ้างอิงแค่ <span
+                            style="font-weight: 600;">Key</span> และอีกทั้งยังมี <span
+                            style="font-weight: 600;">Exception Message</span> เหมือนกับของ <span
+                            style="font-weight: 600;">.get(...)</span> อีกด้วย</p>
+                    <p><span style="font-weight: 600;">.popitem()</span>
+                        เป็นฟังก์ชั่นที่เอาไว้สำหรับสุ่มลบค่าในดิกชันนารีที่คุณนำไปใช้ร่วมด้วย ย้ำว่า <span
+                            style="font-weight: 600;">สุ่ม</span></p>
+                    <p><span style="font-weight: 600;">.clear()</span>
+                        ฟังก์ชั่นสุดท้ายนี้เป็นฟังก์ชั่นที่เอาไว้ลบทุกอย่างค่าทุกอย่างในดิกชันนารีที่คุณนำไปใช้ร่วมด้วย
+                    </p>
+                    <script src="https://gist.github.com/Yothgewalt/0c676b6866cdebac3b45318125bd1924.js"></script>
+                </div>
+            </section>
+            <section id="four">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>เซตแบบเบื้องต้น</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>
+                        วิธีการใช้เซตนั้นคล้ายคลึงกับการใช้ดิกชันนารีตรงที่ใช้สัญลักษณ์ <span
+                            style="font-weight: 600;">Curely
+                            Brackets หรือ {}</span> เหมือนกัน แต่ว่าไม่มีคีย์นั่นเอง หรือว่าคุณสามารถใช้ <span
+                            style="font-weight: 600;">set()</span> ครอบไปที่ตัวแปร <span
+                            style="font-weight: 600;">List</span> ไปเลยก็ได้ เช่น <span
+                            style="font-weight: 600;">set([1, 2, 3, 4, 5])</span> เป็นต้น
+                        เพียงเท่านี้คุณก็จะได้ตัวแปรแบบเซตแล้ว
+                    </p>
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การใช้งานฟังก์ชั่นกับเซต</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>ฟังก์ชั่นที่หยิบยกมาเป็นตัวอย่างนี้มีอยู่ <span style="font-weight: 600;">6 ฟังก์ชั่น</span>
+                        มีอะไรกันบ้างไปดูกันเลย</p>
+                    <span style="font-weight: 600;">len() เป็นฟังก์ชั่นที่เอาไว้เช็คว่ามีข้อมูลอยู่กี่ชุด
+                        ซึ่งเราได้ใช้ไปเยอะแล้ว</span>
+                    <p><span style="font-weight: 600;">.add(element)</span>
+                        เป็นฟังก์ชั่นที่เอาไว้เพิ่มวัตถุที่เราต้องการให้มันเพิ่มเข้าไปในเซตซึ่งจะถูกเพิ่มไว้หลังสุด</p>
+                    <p><span style="font-weight: 600;">.update([list()])</span> เป็นฟังก์ชั่นที่เหมือนกับ <span
+                            style="font-weight: 600;">.add(element)</span> ซึ่งต่างกันตรงที่ .update()
+                        นั้นสามารถเพิ่มได้มากกว่า 1 ตัวนั่นเอง</p>
+                    <p><span style="font-weight: 600;">.remove(element) และ .discard(element)</span>
+                        ในส่วนของฟังก์ชั่นสองตัวนี้รวมกันเพราะต้องเปรียบเทียบความแตกต่าง
+                        เพราะว่าความสามารถของมันนั้นเหมือนกันคือการลบข้อมูลออกจากเซตโดยการใส่ข้อมูลที่ต้องการจะลบลงไปใน
+                        <span style="font-weight: 600;">Parameter</span> แต่คุณสมบัตินั้นต่างกัน discard() นั้นไม่มี
+                        Exception แต่ remove() นั้นมี Exception ที่มีชื่อว่า <span
+                            style="font-weight: 600;">KeyError</span> ซึ่งนั่นแปลว่าเราสามารถนำไปใช้กับ try...catch ได้
+                    </p>
+                    <p><span style="font-weight: 600;">.clear()</span>
+                        เป็นฟังก์ชั่นเอาไว้ลบข้อมูลทั้งหมดของเซตที่เรานำฟังก์ชั่นไปใช้ร่วมด้วย</p>
+                    <script src="https://gist.github.com/Yothgewalt/5698bae29303c53a175c82ef839261e1.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การยูเนียนโดยเซต</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>โดยใช้ฟังก์ชั่นหรือเครื่องหมายในการทำยูเนียน ซึ่งถ้าหากเป็นฟังก์ชั่น <span
+                            style="font-weight: 600;">.union()</span> หรือถ้าหากเป็นเครื่องหมาย <span
+                            style="font-weight: 600;">set_1 | set_2</span> ซึ่งตัวอย่างอยู่ด้านล่าง</p>
+                    <script src="https://gist.github.com/Yothgewalt/0c8a319766e47ae7c1a2c3d19ff02cb5.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การอินเทอร์เซกชั่นโดยเซต</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>โดยใช้ฟังก์ชั่นหรือเครื่องหมายในการทำอินเทอร์เซกชั่น ซึ่งถ้าหากเป็นฟังก์ชั่น <span
+                            style="font-weight: 600;">.intersection()</span>
+                        หรือถ้าหากเป็นเครื่องหมาย <span style="font-weight: 600;">set_1 & set_2</span>
+                        ซึ่งตัวอย่างอยู่ด้านล่าง</p>
+                    <script src="https://gist.github.com/Yothgewalt/af1ed294b811d4fda585f25c05ac8898.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การซิมมีติกโดยเซต</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>โดยใช้ฟังก์ชั่นหรือเครื่องหมายในการทำซิมมีติก ซึ่งถ้าหากเป็นฟังก์ชั่น <span
+                            style="font-weight: 600;">.symmetric_difference()</span>
+                        หรือถ้าหากเป็นเครื่องหมาย <span style="font-weight: 600;">set_1 ^ set_2</span>
+                        ซึ่งตัวอย่างอยู่ด้านล่าง</p>
+                    <script src="https://gist.github.com/Yothgewalt/3ffe03d641b85ce714f60c8e1789780b.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การเช็คซับเซตโดยเซต</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>โดยใช้ฟังก์ชั่นหรือเครื่องหมายในการเช็คซับเซต ซึ่งถ้าหากเป็นฟังก์ชั่น <span
+                            style="font-weight: 600;">.issubset()</span>
+                        หรือถ้าหากเป็นเครื่องหมาย <span style="font-weight: 600;">set_1 <= set_2</span>
+                                ซึ่งตัวอย่างอยู่ด้านล่าง</p>
+                    <script src="https://gist.github.com/Yothgewalt/9b01ee84d80696abb0969500c93a9690.js"></script>
+                    <hr />
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การเช็คซูเปอร์เซตโดยเซต</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>โดยใช้ฟังก์ชั่นหรือเครื่องหมายในการเช็คซูปเปอร์เซต ซึ่งถ้าหากเป็นฟังก์ชั่น <span
+                            style="font-weight: 600;">.issuperset()</span>
+                        หรือถ้าหากเป็นเครื่องหมาย <span style="font-weight: 600;">set_1 >= set_2</span>
+                        ซึ่งตัวอย่างอยู่ด้านล่าง</p>
+                    <script src="https://gist.github.com/Yothgewalt/c3d001094de6a1d4ac632b02c170def4.js"></script>
                 </div>
             </section>
             <section id="five">
+                <div class="container">
+                    <header class="major" style="margin-top: 64px;">
+                        <h4>การจัดอันดับวัตถุ</h4>
+                        <p>พื้นฐานวิชาคอมพิวเตอร์โปรแกรมมิ่งทั่วไป</p>
+                    </header>
+                    <p>โดยในหัวข้อนี้เป็นการใช้งานดิกชันนารีเพื่อเซฟข้อมูลลงในไฟล์ที่เรากำหนดซึ่งจะใช้โมดูลที่มีชื่อว่า
+                        <span style="font-weight: 600;">pickle</span> ซึ่งโมดูลนี้จะมีฟังก์ชั่นที่ใช้หลักๆ
+                        อยู่สองตัวนั่นก็คือ <span style="font-weight: 600;">.load(file)</span> กับ <span
+                            style="font-weight: 600;">.dump(object, file)</span>
+                    </p>
+                    <p><span style="font-weight: 600;">ตัวอย่างด้านล่าง</span>
+                        ที่เราได้เอามาเป็นตัวอย่างนั้นจะเกี่ยวกับฟังก์ชั่น <span
+                            style="font-weight: 600;">.dump()</span>
+                        ซึ่งฟังก์ชั่นนี้จะเอาทำการนำอ็อบเจกต์ไปเซฟลงในไฟล์ที่เรากำหนด</p>
+                    <script src="https://gist.github.com/Yothgewalt/c1c922265bfa2615b104799141b70354.js"></script>
+                    <hr />
+                    <p><span style="font-weight: 600;">ตัวอย่างด้านล่าง</span>
+                        ที่เราได้เอามาเป็นตัวอย่างนั้นจะเกี่ยวกับฟังก์ชั่น <span
+                            style="font-weight: 600;">.load()</span>
+                        ซึ่งฟังก์ชั่นนี้จะเอาไว้ดึงข้อมูลจากไฟล์ที่เรากำหนดเพื่อนำอ็อบเจกต์มาใช้งาน</p>
+                    <script src="https://gist.github.com/Yothgewalt/2c7bb61485147c8c15685ab0f715c03b.js"></script>
+                    <div class="next-page-container">
+                        <a href="./../pages/lists-and-tuples.html" class="prev-page-button">ย้อนหน้ากลับ</a>
+                        <a href="./../index.html" class="next-page-button">กลับไปหน้าหลัก</a>
+                    </div>
+                </div>
+            </section>
+            <section id="six">
                 <div class="container">
                     <h3>ติดต่อฉัน</h3>
                     <p>หากคุณสนใจในผลงานของฉันและต้องการที่จะจ้างงานหรือติดต่อพูดคุยกับฉัน
